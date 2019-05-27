@@ -14,7 +14,8 @@ class user extends entry{
 			'addUserAddr',
 			'listUserAddr',
 			'deleteUserAddr',
-			'wantGetMoney'
+			'wantGetMoney',
+            'listAllUser'
 		])){
 			$this->{$this->method}();
 		}else{
@@ -35,12 +36,16 @@ class user extends entry{
 
 	private function setUserInfo(){
 		$this->checkToken();
-		$this->param('key,value');
+		$this->param('key,value,*userid');
 		if(in_array($this->key,[
 			'nickname',
-			'icon'
+			'icon',
+            'restMoney'
 		])){
-			$res = userModel::setUserInfo($this->__userinfo['userid'],$this->key,$this->value);
+		    if (!$userid) {
+		        $this->userid = $this->__userinfo['userid'];
+            }
+			$res = userModel::setUserInfo($this->userid,$this->key,$this->value);
 			if($res){
 				ajax(0,'成功');
 			}else{
@@ -108,6 +113,18 @@ class user extends entry{
 		$this->checkToken();
 		$this->param('getMoneyId');
 	}
+
+	public function listAllUser(){
+	    $this->checkToken();
+	    $this->checkUserType('admin');
+
+	    $res = userModel::listAllUser();
+	    if($res){
+	        ajax(0,'成功',$res);
+        }else{
+	        ajax(-1,'没有任何数据');
+        }
+    }
 }
 
 runApp();

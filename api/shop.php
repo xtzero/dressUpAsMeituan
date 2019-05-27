@@ -11,7 +11,8 @@ class shop extends entry{
             'listShop',
             'addShop',
 			'delShop',
-			'getShopInfo'
+			'getShopInfo',
+            'editShopInfo'
 		])){
 			$this->{$this->method}();
 		}else{
@@ -23,11 +24,11 @@ class shop extends entry{
 	 * 添加商店
 	 */
 	private function addShop(){
-		$this->param('name');
+		$this->param('name,*notice');
 		$this->checkToken();
 		$this->checkUserType('admin');
 
-		$res = shopModel::addShop($this->name);
+		$res = shopModel::addShop($this->name,$this->notice);
 		if($res){
 			ajax(0,'成功');
 		}else{
@@ -73,6 +74,22 @@ class shop extends entry{
 			ajax(1,'没有获取到这个店铺');
 		}
 	}
+
+    private function editShopInfo(){
+	    $this->checkToken();
+	    $this->param('shopId,key,value');
+
+	    if (!in_array($this->key, ['name','descr','notice'])) {
+	        ajax(1,'不允许修改这个字段');
+        } else {
+	        $res = shopModel::editShopInfo($this->shopId, $this->key, $this->value);
+	        if ($res) {
+	            ajax(0,'成功');
+            } else {
+	            ajax(-1, '修改店铺信息时出现错误，请稍后重试');
+            }
+        }
+    }
 }
 
 runApp();

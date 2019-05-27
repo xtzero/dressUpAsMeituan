@@ -1,0 +1,1473 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第5章 数据库设计 · 论文</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xt">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5.html" />
+    
+    
+    <link rel="prev" href="4.3.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    请读我
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="0.0.html">
+            
+                <a href="0.0.html">
+            
+                    
+                    标题和封皮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="0.1.html">
+            
+                <a href="0.1.html">
+            
+                    
+                    摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="README.md">
+            
+                <span>
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    第1章 需求分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.1 用户需求分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.2 需求列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    第2章 开发技术及开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.1 技术架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.2 app端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.3 管理端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.4 后端技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.5 数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.6 域名与服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.7 开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    第3章 产品设计阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3.1 可行性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3.2 系统流程设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3.3 系统功能设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3.4 用户用例图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" >
+            
+                <span>
+            
+                    
+                    第4章 开发准备与开发前设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" data-path="4.1.html">
+            
+                <a href="4.1.html">
+            
+                    
+                    4.1 搭建服务器环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" data-path="4.2.html">
+            
+                <a href="4.2.html">
+            
+                    
+                    4.2 部署框架代码到服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="4.3.html">
+            
+                <a href="4.3.html">
+            
+                    
+                    4.3 设置域名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    第5章 数据库设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.8.1" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5.1 概念结构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8.2" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5.2 逻辑结构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.3" >
+            
+                <span>
+            
+                    
+                    5.3 数据库的物理实现
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    第6章 编码开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.9.1" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1 后端架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.2" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.1 框架结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.3" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.2 程序入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.4" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.3 数据库类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.5" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.4 参数验证方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.5 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.7" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.6 函数库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.8" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.7 登录与权限验证机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2 后端接口开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.10.1" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.1 登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.2 店铺 - 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.3" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.3 店铺 - 查看店铺详情与物品列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.4" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.4 订单 - 创建订单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.5" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.5 订单 - 查看订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.6" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.5 用户 - 查看基本信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.7" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.6 用户 - 修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.8" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.7 用户 - 查看全部收货地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.9" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.8 用户 - 管理收货地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.10" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.9 后台 - 创建店铺
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.11" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.10 后台 - 修改店铺信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.12" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.11 后台 - 添加物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.13" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.12 后台 - 删除物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.14" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.13 后台 - 查看订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.15" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.14 后台 - 查看所有用户列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.16" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.15 后台 - 修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3 app端前端页面与逻辑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.11.1" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.1 登录与登录凭证保存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.2" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.2 标题和导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.3 用户首页和订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.4" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.4 店铺列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.5" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.5 店铺详情和物品列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.6" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.6 创建订单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.7" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.7 用户信息修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.8" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.8 订单详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.9" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.9 收货地址选择和管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4 后台管理端前端页面与逻辑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.12.1" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.1 登录机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.2" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.2 导航和路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.3" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.3 订单管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.4" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.4 店铺管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.5" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.5 物品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.6" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.6 用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    第7章 软件测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.13.1" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.1 功能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.2" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.2 可用性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.3" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.3 测试结果分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="n1.html">
+            
+                <a href="n1.html">
+            
+                    
+                    结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="n2.html">
+            
+                <a href="n2.html">
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="n3.html">
+            
+                <a href="n3.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第5章 数据库设计</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;5&#x7AE0;-&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;"><a name="&#x7B2C;5&#x7AE0;-&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;" class="plugin-anchor" href="#&#x7B2C;5&#x7AE0;-&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;5&#x7AE0; &#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;</h1>
+<h2 id="51-&#x6982;&#x5FF5;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;"><a name="51-&#x6982;&#x5FF5;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;" class="plugin-anchor" href="#51-&#x6982;&#x5FF5;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 &#x6982;&#x5FF5;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;</h2>
+<p>&#x5728;&#x672C;&#x8282;&#x6211;&#x4EEC;&#x4F7F;&#x7528;E-R &#x56FE;&#x6765;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x521D;&#x6B65;&#x8BBE;&#x8BA1;&#x3002;E-R &#x56FE;&#x53EA;&#x8868;&#x793A;&#x5B9E;&#x4F53;-&#x5C5E;&#x6027;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x548C;&#x5B9E;&#x4F53;&#x95F4;&#x7684;&#x8054;&#x7CFB;&#xFF0C;&#x65E0;&#x5173;&#x4E8E;DBMS&#x3002;&#x4F9D;&#x7167;E-R &#x56FE;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;DBMS &#x4E0B;&#x5EFA;&#x7ACB;&#x8868;&#x7ED3;&#x6784;&#x3002;</p>
+<p><img src="../img/visio3.png" alt=""></p>
+<blockquote>
+<p>&#x56FE;&#xFF1A;&#x7CFB;&#x7EDF;E-R&#x56FE;</p>
+</blockquote>
+<h2 id="52-&#x903B;&#x8F91;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;"><a name="52-&#x903B;&#x8F91;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;" class="plugin-anchor" href="#52-&#x903B;&#x8F91;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2 &#x903B;&#x8F91;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;</h2>
+<p>&#x5728;&#x672C;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5C06;E-R &#x56FE;&#x4E2D;&#x8868;&#x793A;&#x7684;&#x5B9E;&#x4F53;-&#x5173;&#x7CFB;&#x4E4B;&#x95F4;&#x7684;&#x8054;&#x7CFB;&#x8F6C;&#x6362;&#x4E3A;&#x5173;&#x7CFB;&#x6A21;&#x5F0F;&#xFF0C;&#x5E76;&#x5728;&#x5173;&#x7CFB;&#x6A21;&#x5F0F;&#x4E0B;&#x786E;&#x5B9A;&#x4E3B;&#x952E;&#x548C;&#x5916;&#x952E;&#x7684;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x5728;E-R &#x56FE;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x90E8;&#x5206;&#xFF0C;&#x6D89;&#x53CA;&#x4E86;&#x7528;&#x6237;&#x7684;&#x57FA;&#x672C;&#x5C5E;&#x6027;&#x3002;&#x7528;&#x4E8E;&#x4E0E;&#x8BA2;&#x5355;&#x4EA7;&#x751F;&#x8054;&#x7CFB;&#xFF0C;&#x8BA2;&#x5355;&#x4E0E;&#x5546;&#x54C1;&#x4EA7;&#x751F;&#x8054;&#x7CFB;&#x3002;&#x56DB;&#x4E2A;&#x5B9E;&#x4F53;&#x4E4B;&#x95F4;&#x662F;&#x4E00;&#x6761;&#x7EBF;&#x7684;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x6574;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x903B;&#x8F91;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x3002;</p>
+<p>&#x7528;&#x6237;&#xFF08;&#x7528;&#x6237;id&#xFF0C;&#x6635;&#x79F0;&#xFF0C;&#x5934;&#x50CF;&#xFF0C;&#x5BC6;&#x7801;&#xFF0C;&#x4F59;&#x989D;&#xFF09;</p>
+<p>&#x4E3B;&#x952E;&#xFF1A;&#x7528;&#x6237;id</p>
+<p>&#x8BA2;&#x5355;&#xFF08;&#x8BA2;&#x5355;id&#xFF0C;&#x521B;&#x5EFA;&#x4EBA;id&#xFF0C;&#x8BA2;&#x5355;&#x5730;&#x5740;&#xFF0C;&#x6536;&#x8D27;&#x4EBA;&#xFF0C;&#x8BA2;&#x5355;&#x73B0;&#x4EF7;&#xFF0C;&#x8BA2;&#x5355;&#x539F;&#x4EF7;&#xFF09;</p>
+<p>&#x4E3B;&#x952E;&#xFF1A;&#x8BA2;&#x5355;id&#xFF1B;&#x5916;&#x952E;&#xFF1A;&#x521B;&#x5EFA;&#x4EBA;id</p>
+<p>&#x5E97;&#x94FA;&#xFF08;&#x5E97;&#x94FA;id&#xFF0C;&#x5E97;&#x94FA;&#x540D;&#x5B57;&#xFF0C;&#x5E97;&#x94FA;&#x7B80;&#x4ECB;&#xFF09;</p>
+<p>&#x4E3B;&#x952E;&#xFF1A;&#x5E97;&#x94FA;id</p>
+<p>&#x5546;&#x54C1;&#xFF08;&#x5546;&#x54C1;id&#xFF0C;&#x5E97;&#x94FA;id&#xFF0C;&#x5546;&#x54C1;&#x540D;&#x5B57;&#xFF0C;&#x5546;&#x54C1;&#x4EF7;&#x683C;&#xFF0C;&#x8BA2;&#x5355;&#xFF09;</p>
+<p>&#x4E3B;&#x952E;&#xFF1A;&#x5546;&#x54C1;id&#xFF1B;&#x5916;&#x952E;&#xFF1A;&#x5E97;&#x94FA;id</p>
+<p>&#x5546;&#x54C1;-&#x8BA2;&#x5355;&#xFF08;&#x5546;&#x54C1;&#x8BA2;&#x5355;id&#xFF0C;&#x5546;&#x54C1;id&#xFF0C;&#x8BA2;&#x5355;id&#xFF09;</p>
+<p>&#x4E3B;&#x952E;&#xFF1A;&#x5546;&#x54C1;&#x8BA2;&#x5355;id&#xFF1B;&#x5916;&#x952E;&#xFF1A;&#x5546;&#x54C1;id&#xFF0C;&#x8BA2;&#x5355;id</p>
+<p>&#x4E0A;&#x8FF0;&#x903B;&#x8F91;&#x5173;&#x7CFB;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x56FE;&#x6765;&#x8868;&#x793A;&#x3002;</p>
+<p><img src="../img/visio4.png" alt=""></p>
+<h2 id="53-&#x6570;&#x636E;&#x5E93;&#x7684;&#x7269;&#x7406;&#x5B9E;&#x73B0;"><a name="53-&#x6570;&#x636E;&#x5E93;&#x7684;&#x7269;&#x7406;&#x5B9E;&#x73B0;" class="plugin-anchor" href="#53-&#x6570;&#x636E;&#x5E93;&#x7684;&#x7269;&#x7406;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3 &#x6570;&#x636E;&#x5E93;&#x7684;&#x7269;&#x7406;&#x5B9E;&#x73B0;</h2>
+<p>&#x5728;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7269;&#x7406;&#x5B9E;&#x73B0;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4ECE; DBMS&#x7684;&#x9009;&#x62E9;&#x5F00;&#x59CB;&#xFF0C;&#x76F4;&#x5230;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x8868;&#x90FD;&#x5EFA;&#x6210;&#x3002;&#x6839;&#x636E;&#x524D;&#x4E24;&#x8282;&#x7684;&#x6982;&#x5FF5;&#x53CA;&#x903B;&#x8F91;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#xFF0C;&#x5DF2;&#x7ECF;&#x5F97;&#x5230;&#x4E86;&#x6570;&#x5E93;&#x65E0;&#x5173;&#x4E8E;DBMS&#x7684;&#x8BBE;&#x8BA1;&#x65B9;&#x6848;&#xFF0C;&#x5728;&#x8FD9;&#x4E00;&#x8282;&#x6211;&#x4EEC;&#x5C06;&#x524D;&#x6587;&#x6240;&#x8FF0;&#x843D;&#x5B9E;&#x5230;&#x9645;&#x7684;DBMS&#x4E0A;&#xFF0C;&#x8FDB;&#x884C;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x8BBE;&#x8BA1;&#x3002;</p>
+<p>&#x5728; DBMS&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x9009;&#x62E9; MySQL&#xFF0C;&#x914D;&#x5408; &#x539F;&#x751F;&#x7684;PHP MySQL &#x6269;&#x5C55;&#x53EF;&#x4EE5;&#x53D1;&#x6325;&#x5176;&#x6700;&#x5927;&#x7684;&#x4F18;&#x52BF;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868; user&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6237;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x4E2D; id &#x662F;&#x4E3B;&#x952E;&#xFF0C;&#x4E3A;&#x7528;&#x6237;&#x8868;&#x7684;&#x7D22;&#x5F15;&#x884C;&#x3002; &#x540C;&#x65F6;&#x4E5F;&#x662F;&#x552F;&#x4E00;&#x5B57;&#x6BB5;&#xFF0C;&#x4E3A;&#x67E5;&#x8BE2;&#x63D0;&#x4F9B;&#x7D22;&#x5F15;&#x3002;</p>
+<p>&#x6267;&#x884C;&#x5982;&#x4E0B;&#x8BED;&#x53E5;&#x6765;&#x521B;&#x5EFA;user&#x8868;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`user`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT,
+  <span class="hljs-string">`usr`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`pwd`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  <span class="hljs-string">`create_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`update_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`nickname`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`icon`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`type`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  <span class="hljs-string">`restMoney`</span> <span class="hljs-built_in">float</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> AUTO_INCREMENT=<span class="hljs-number">2</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;token&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x7528;&#x6237;&#x7684;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#x3002;&#x5176;&#x4E2D;id&#x662F;&#x4E3B;&#x952E;&#xFF0C;userid&#x662F;&#x5916;&#x952E;&#xFF0C;&#x4E3A;user&#x8868;&#x4E2D;&#x7684;id&#x3002;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x6765;&#x521B;&#x5EFA;token&#x8868;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`token`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT,
+  <span class="hljs-string">`token`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`userid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`die_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`create_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>,<span class="hljs-string">`token`</span>,<span class="hljs-string">`userid`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> AUTO_INCREMENT=<span class="hljs-number">25</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+<p>&#x521B;&#x5EFA;user_addr&#x8868;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x7528;&#x6237;&#x7684;&#x5730;&#x5740;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x4E2D;id&#x662F;&#x4E3B;&#x952E;&#xFF0C;userid&#x662F;&#x5916;&#x952E;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`user_addr`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT,
+  <span class="hljs-string">`userid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`addr`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`phone`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  <span class="hljs-string">`create_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>,<span class="hljs-string">`userid`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> AUTO_INCREMENT=<span class="hljs-number">3</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+<p>&#x521B;&#x5EFA;shop&#x8868;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x5E97;&#x94FA;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x4E2D;id&#x662F;&#x4E3B;&#x952E;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`shop`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`create_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  <span class="hljs-string">`notice`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> AUTO_INCREMENT=<span class="hljs-number">6</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+<p>&#x521B;&#x5EFA;goods&#x8868;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x5546;&#x54C1;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x4E2D;id&#x662F;&#x4E3B;&#x952E;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`goods`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT,
+  <span class="hljs-string">`shopId`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`describe`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`create_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`price`</span> <span class="hljs-built_in">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`image`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> AUTO_INCREMENT=<span class="hljs-number">13</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+<p>&#x521B;&#x5EFA;order&#x8868;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x8BA2;&#x5355;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x4E2D;id&#x662F;&#x4E3B;&#x952E;&#xFF0C;userid&#x662F;&#x5916;&#x952E;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`order`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">32</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`userid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`create_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`ori_price`</span> <span class="hljs-built_in">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`price`</span> <span class="hljs-built_in">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`phone`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`addr`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  <span class="hljs-string">`status`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>,<span class="hljs-string">`userid`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+<p>&#x521B;&#x5EFA;order_goods&#x8868;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x8BA2;&#x5355;-&#x5546;&#x54C1;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x4E2D;id&#x662F;&#x4E3B;&#x952E;&#xFF0C;orderId&#x3001;goodId&#x662F;&#x5916;&#x952E;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x8BA2;&#x5355;id&#x548C;&#x5546;&#x54C1;id&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`order_goods`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT,
+  <span class="hljs-string">`orderId`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`goodId`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`create_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`ori_price`</span> <span class="hljs-built_in">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`price`</span> <span class="hljs-built_in">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> AUTO_INCREMENT=<span class="hljs-number">8</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+<p>&#x521B;&#x5EFA;goods_price_control&#x8868;&#xFF0C;&#x7528;&#x4E8E;&#x989D;&#x5916;&#x63A7;&#x5236;&#x5546;&#x54C1;&#x4EF7;&#x683C;&#x3002;&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x7684;&#x5177;&#x4F53;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;&#x4F1A;&#x5728;&#x540E;&#x8FB9;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x3002;&#x8868;&#x4E2D;id&#x662F;&#x4E3B;&#x952E;&#xFF0C;goodId&#x662F;&#x5916;&#x952E;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`good_price_control`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT,
+  <span class="hljs-string">`goodId`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`begin_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`end_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  <span class="hljs-string">`price`</span> <span class="hljs-built_in">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`type`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  <span class="hljs-string">`incOrDec`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>,<span class="hljs-string">`goodId`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> AUTO_INCREMENT=<span class="hljs-number">2</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+<p>&#x521B;&#x5EFA;money_log&#x8868;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x7528;&#x4E8E;&#x4F59;&#x989D;&#x53D8;&#x52A8;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x5176;&#x4E2D;id&#x662F;&#x4E3B;&#x952E;&#xFF0C;userid&#x662F;&#x5916;&#x952E;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`money_log`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT,
+  <span class="hljs-string">`userid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`money`</span> <span class="hljs-built_in">float</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`afterChange`</span> <span class="hljs-built_in">float</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`create_at`</span> datetime <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`reason`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`valid`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&apos;1&apos;</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>,<span class="hljs-string">`userid`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> AUTO_INCREMENT=<span class="hljs-number">5</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4.3.html" class="navigation navigation-prev " aria-label="Previous page: 4.3 设置域名解析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5.html" class="navigation navigation-next " aria-label="Next page: 5.1 概念结构设计">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第5章 数据库设计","level":"2.8","depth":1,"next":{"title":"5.1 概念结构设计","level":"2.8.1","depth":2,"path":"md/5.md","ref":"md/5.md","articles":[]},"previous":{"title":"4.3 设置域名解析","level":"2.7.3","depth":2,"path":"md/4.3.md","ref":"md/4.3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","anchors","github","github-buttons","sharing-plus","-anchor-navigation-ex","code","search-pro","-lunr","-search","-tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"是xt写的，","modify_label":"上次修改：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/xtzero"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true},"github-buttons":{},"sharing":{"douban":true,"facebook":false,"google":false,"pocket":false,"qq":true,"qzone":true,"twitter":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"xt","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"论文","language":"zh-hans","gitbook":"3.2.3","description":"一个论文"},"file":{"path":"md/5.md","mtime":"2019-05-24T17:56:04.259Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T10:42:47.156Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

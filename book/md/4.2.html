@@ -1,0 +1,1449 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.2 部署框架代码到服务器 · 论文</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xt">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4.3.html" />
+    
+    
+    <link rel="prev" href="4.1.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    请读我
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="0.0.html">
+            
+                <a href="0.0.html">
+            
+                    
+                    标题和封皮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="0.1.html">
+            
+                <a href="0.1.html">
+            
+                    
+                    摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="README.md">
+            
+                <span>
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    第1章 需求分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.1 用户需求分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.2 需求列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    第2章 开发技术及开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.1 技术架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.2 app端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.3 管理端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.4 后端技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.5 数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.6 域名与服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.7 开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    第3章 产品设计阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3.1 可行性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3.2 系统流程设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3.3 系统功能设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3.4 用户用例图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" >
+            
+                <span>
+            
+                    
+                    第4章 开发准备与开发前设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" data-path="4.1.html">
+            
+                <a href="4.1.html">
+            
+                    
+                    4.1 搭建服务器环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.7.2" data-path="4.2.html">
+            
+                <a href="4.2.html">
+            
+                    
+                    4.2 部署框架代码到服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="4.3.html">
+            
+                <a href="4.3.html">
+            
+                    
+                    4.3 设置域名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    第5章 数据库设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5.1 概念结构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5.2 逻辑结构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.3" >
+            
+                <span>
+            
+                    
+                    5.3 数据库的物理实现
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    第6章 编码开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.9.1" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1 后端架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.2" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.1 框架结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.3" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.2 程序入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.4" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.3 数据库类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.5" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.4 参数验证方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.5 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.7" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.6 函数库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.8" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.7 登录与权限验证机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2 后端接口开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.10.1" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.1 登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.2 店铺 - 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.3" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.3 店铺 - 查看店铺详情与物品列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.4" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.4 订单 - 创建订单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.5" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.5 订单 - 查看订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.6" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.5 用户 - 查看基本信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.7" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.6 用户 - 修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.8" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.7 用户 - 查看全部收货地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.9" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.8 用户 - 管理收货地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.10" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.9 后台 - 创建店铺
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.11" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.10 后台 - 修改店铺信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.12" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.11 后台 - 添加物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.13" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.12 后台 - 删除物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.14" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.13 后台 - 查看订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.15" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.14 后台 - 查看所有用户列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.16" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.15 后台 - 修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3 app端前端页面与逻辑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.11.1" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.1 登录与登录凭证保存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.2" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.2 标题和导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.3 用户首页和订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.4" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.4 店铺列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.5" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.5 店铺详情和物品列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.6" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.6 创建订单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.7" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.7 用户信息修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.8" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.8 订单详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.9" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.9 收货地址选择和管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4 后台管理端前端页面与逻辑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.12.1" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.1 登录机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.2" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.2 导航和路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.3" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.3 订单管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.4" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.4 店铺管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.5" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.5 物品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.6" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.6 用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    第7章 软件测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.13.1" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.1 功能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.2" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.2 可用性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.3" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.3 测试结果分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="n1.html">
+            
+                <a href="n1.html">
+            
+                    
+                    结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="n2.html">
+            
+                <a href="n2.html">
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="n3.html">
+            
+                <a href="n3.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.2 部署框架代码到服务器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="42-&#x90E8;&#x7F72;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x5230;&#x670D;&#x52A1;&#x5668;"><a name="42-&#x90E8;&#x7F72;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x5230;&#x670D;&#x52A1;&#x5668;" class="plugin-anchor" href="#42-&#x90E8;&#x7F72;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x5230;&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 &#x90E8;&#x7F72;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x5230;&#x670D;&#x52A1;&#x5668;</h2>
+<h3 id="421-&#x521B;&#x5EFA;github&#x4ED3;&#x5E93;"><a name="421-&#x521B;&#x5EFA;github&#x4ED3;&#x5E93;" class="plugin-anchor" href="#421-&#x521B;&#x5EFA;github&#x4ED3;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2.1 &#x521B;&#x5EFA;github&#x4ED3;&#x5E93;</h3>
+<p>&#x5728;&#x90E8;&#x7F72;&#x4EE3;&#x7801;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x8981;&#x786E;&#x5B9A;&#x4EE3;&#x7801;&#x90E8;&#x7F72;&#x65B9;&#x6848;&#x3002;&#x5728;&#x8BBE;&#x8BA1;&#x9636;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x51B3;&#x5B9A;&#x4F7F;&#x7528;github&#x4F5C;&#x4E3A;git&#x7684;&#x4E2D;&#x8F6C;&#x3002;&#x5728;github&#x4E0A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x4E2D;&#x8F6C;&#x7684;repo&#xFF0C;&#x5728;&#x672C;&#x5730;push&#x4EE3;&#x7801;&#x5230;github&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5B9A;&#x65F6;&#x4ECE;github&#x4E0A;pull&#x4EE3;&#x7801;&#x5230;&#x672C;&#x5730;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x524D;&#x5F80;github&#x5EFA;&#x7ACB;&#x9879;&#x76EE;&#x3002;&#x5EFA;&#x7ACB;&#x9879;&#x76EE;&#x7684;&#x65F6;&#x5019;&#x4E00;&#x5B9A;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8981;&#x5C06;&#x9879;&#x76EE;&#x914D;&#x7F6E;&#x4E3A;&#x79C1;&#x6709;&#x3002;&#x56E0;&#x4E3A;&#x672C;&#x6B21;&#x9879;&#x76EE;&#x53EA;&#x662F;&#x7528;github&#x4F5C;&#x4E3A;&#x4E2D;&#x8F6C;&#xFF0C;&#x5E76;&#x4E0D;&#x60F3;&#x4E0E;&#x5176;&#x4ED6;&#x4EBA;&#x5171;&#x4EAB;&#x4EE3;&#x7801;&#x3002;</p>
+<p><img src="../img/8.png" alt=""></p>
+<blockquote>
+<p>&#x56FE;&#xFF1A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x7684;github repo</p>
+</blockquote>
+<p>&#x5EFA;&#x7ACB;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x672C;&#x5730;&#xFF0C;&#x4F7F;&#x7528;Github Desktop&#x5C06;&#x4EE3;&#x7801;&#x5E93;clone&#x4E0B;&#x6765;&#x3002;</p>
+<p><img src="../img/9.png" alt=""></p>
+<p>&#x5C06;&#x521A;&#x521B;&#x5EFA;&#x597D;&#x7684;repo clone&#x5230;&#x672C;&#x5730;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x7F16;&#x8F91;&#x6839;&#x76EE;&#x5F55;&#x7684;README.md&#xFF0C;&#x5E76;&#x4F7F;&#x7528;phpstorm&#x81EA;&#x5E26;&#x7684;git&#x63D2;&#x4EF6;&#x5C06;&#x6587;&#x4EF6;push&#x5230;github&#x4E0A;&#x3002;</p>
+<p><img src="../img/10.png" alt=""></p>
+<p><img src="../img/11.png" alt=""></p>
+<p><img src="../img/12.png" alt=""></p>
+<p>push&#x6210;&#x529F;&#x540E;&#xFF0C;&#x6253;&#x5F00;github&#x7F51;&#x9875;&#xFF0C;&#x5237;&#x65B0;&#x9875;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x66F4;&#x65B0;&#x7ED3;&#x679C;&#x3002;</p>
+<p><img src="../img/13.png" alt=""></p>
+<h3 id="422-&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;git&#x73AF;&#x5883;"><a name="422-&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;git&#x73AF;&#x5883;" class="plugin-anchor" href="#422-&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;git&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2.2 &#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;git&#x73AF;&#x5883;</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x524D;&#x5F80;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x505A;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x7531;&#x4E8E;&#x65B0;&#x5B89;&#x88C5;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6CA1;&#x6709;git&#x529F;&#x80FD;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x5B89;&#x88C5;git&#x5DE5;&#x5177;&#x3002;&#x5728;ssh&#x4E0B;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5;git&#x3002;</p>
+<pre><code class="lang-shell">$ yum install git
+</code></pre>
+<p>&#x6267;&#x884C;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#x4F1A;&#x8FD4;&#x56DE;&#x5982;&#x4E0B;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-shell">$ yum install git
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * webtatic: uk.repo.webtatic.com
+Resolving Dependencies
+--&gt; Running transaction check
+---&gt; Package git.x86_64 0:1.8.3.1-20.el7 will be installed
+--&gt; Processing Dependency: perl-Git = 1.8.3.1-20.el7 for package: git-1.8.3.1-20.el7.x86_64
+--&gt; Processing Dependency: rsync for package: git-1.8.3.1-20.el7.x86_64
+--&gt; Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-20.el7.x86_64
+--&gt; Processing Dependency: perl(Git) for package: git-1.8.3.1-20.el7.x86_64
+--&gt; Processing Dependency: perl(Error) for package: git-1.8.3.1-20.el7.x86_64
+--&gt; Running transaction check
+---&gt; Package perl-Error.noarch 1:0.17020-2.el7 will be installed
+---&gt; Package perl-Git.noarch 0:1.8.3.1-20.el7 will be installed
+---&gt; Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed
+---&gt; Package rsync.x86_64 0:3.1.2-6.el7_6.1 will be installed
+--&gt; Finished Dependency Resolution
+
+Dependencies Resolved
+
+============================================================================================================================================================================================== Package                                           Arch                                    Version                                             Repository                                Size
+==============================================================================================================================================================================================Installing:
+ git                                               x86_64                                  1.8.3.1-20.el7                                      updates                                  4.4 M
+Installing for dependencies:
+ perl-Error                                        noarch                                  1:0.17020-2.el7                                     base                                      32 k
+ perl-Git                                          noarch                                  1.8.3.1-20.el7                                      updates                                   55 k
+ perl-TermReadKey                                  x86_64                                  2.30-20.el7                                         base                                      31 k
+ rsync                                             x86_64                                  3.1.2-6.el7_6.1                                     updates                                  404 k
+
+Transaction Summary
+==============================================================================================================================================================================================Install  1 Package (+4 Dependent packages)
+
+Total download size: 4.9 M
+Installed size: 23 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/5): perl-Git-1.8.3.1-20.el7.noarch.rpm                                                                                                                              |  55 kB  00:00:00
+(2/5): perl-TermReadKey-2.30-20.el7.x86_64.rpm                                                                                                                         |  31 kB  00:00:00
+(3/5): perl-Error-0.17020-2.el7.noarch.rpm                                                                                                                             |  32 kB  00:00:00
+(4/5): rsync-3.1.2-6.el7_6.1.x86_64.rpm                                                                                                                                | 404 kB  00:00:00
+(5/5): git-1.8.3.1-20.el7.x86_64.rpm                                                                                                                                   | 4.4 MB  00:00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Total                                                                                                                                                          14 MB/s | 4.9 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:perl-Error-0.17020-2.el7.noarch                                                                                                                                          1/5
+  Installing : rsync-3.1.2-6.el7_6.1.x86_64                                                                                                                                               2/5
+  Installing : perl-TermReadKey-2.30-20.el7.x86_64                                                                                                                                        3/5
+  Installing : git-1.8.3.1-20.el7.x86_64                                                                                                                                                  4/5
+  Installing : perl-Git-1.8.3.1-20.el7.noarch                                                                                                                                             5/5
+  Verifying  : perl-Git-1.8.3.1-20.el7.noarch                                                                                                                                             1/5
+  Verifying  : 1:perl-Error-0.17020-2.el7.noarch                                                                                                                                          2/5
+  Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                                                                                                                                        3/5
+  Verifying  : git-1.8.3.1-20.el7.x86_64                                                                                                                                                  4/5
+  Verifying  : rsync-3.1.2-6.el7_6.1.x86_64                                                                                                                                               5/5
+
+Installed:
+  git.x86_64 0:1.8.3.1-20.el7
+
+Dependency Installed:
+  perl-Error.noarch 1:0.17020-2.el7              perl-Git.noarch 0:1.8.3.1-20.el7              perl-TermReadKey.x86_64 0:2.30-20.el7              rsync.x86_64 0:3.1.2-6.el7_6.1
+
+Complete!
+</code></pre>
+<p>&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5B89;&#x88C5;git&#x6210;&#x529F;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x624B;&#x52A8;&#x5C06;&#x521A;&#x521B;&#x5EFA;&#x597D;&#x7684;repo clone&#x4E0B;&#x6765;&#x3002;</p>
+<pre><code class="lang-shell">$ git clone https://github.com/xtzero/finalDesign1.git
+</code></pre>
+<h3 id="423-&#x4F7F;&#x7528;shell&#x811A;&#x672C;&#x8BA9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x66F4;&#x65B0;"><a name="423-&#x4F7F;&#x7528;shell&#x811A;&#x672C;&#x8BA9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x66F4;&#x65B0;" class="plugin-anchor" href="#423-&#x4F7F;&#x7528;shell&#x811A;&#x672C;&#x8BA9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2.3 &#x4F7F;&#x7528;shell&#x811A;&#x672C;&#x8BA9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x66F4;&#x65B0;</h3>
+<p>clone&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6211;&#x4EEC;&#x7F16;&#x8F91;&#x8FD9;&#x6837;&#x4E24;&#x4E2A;shell&#x811A;&#x672C;&#x3002;</p>
+<p>for.sh</p>
+<pre><code class="lang-shell">#!/bin/bash
+for((i=0;i==0;i=i+0))
+do
+        sleep 5s
+        ~/git.sh;
+done
+</code></pre>
+<p>git.sh</p>
+<pre><code class="lang-shell">#!/bin/bash
+
+cd /var/www/html/xtBlog/ &amp;&amp; git pull
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#x662F;&#x6BCF;&#x9694;5&#x79D2;&#x5C31;&#x8C03;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x811A;&#x672C;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x4ECE;github&#x4E0A;&#x62C9;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E0A;&#x6267;&#x884C;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;</p>
+<pre><code class="lang-shell">nohup ./for.sh &amp;
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x6BCF;5&#x79D2;&#x4ECE;github&#x4E0A;pull&#x4E00;&#x6B21;&#x6700;&#x65B0;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x5728;&#x540E;&#x9762;&#x7684;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728;&#x672C;&#x5730;&#x5C06;&#x4EE3;&#x7801;push&#x5230;github&#x4E0A;&#xFF0C;&#x7A0D;&#x7B49;5&#x79D2;&#x5C31;&#x53EF;&#x4EE5;&#x5237;&#x65B0;&#x9875;&#x9762;&#x770B;&#x5230;&#x6700;&#x65B0;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E86;&#x3002;</p>
+<h3 id="424-&#x5C06;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;"><a name="424-&#x5C06;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;" class="plugin-anchor" href="#424-&#x5C06;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2.4 &#x5C06;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;</h3>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x51C6;&#x5907;&#x597D;&#x7684;&#x521D;&#x59CB;&#x4EE3;&#x7801;&#x590D;&#x5236;&#x5230;github&#x9879;&#x76EE;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;phpstorm&#x81EA;&#x5E26;&#x7684;git&#x529F;&#x80FD;&#x5C06;&#x6587;&#x4EF6;push&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002;</p>
+<p><img src="../img/14.png" alt=""></p>
+<p>&#x4E0A;&#x4F20;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x524D;&#x5F80;&#x670D;&#x52A1;&#x5668;&#x7684;git&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x76EE;&#x5F55;&#x4E0B;&#x4E86;&#x3002;</p>
+<p><img src="../img/15.png" alt=""></p>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5C06;&#x521D;&#x59CB;&#x4EE3;&#x7801;&#x5168;&#x90E8;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002;&#x4E0B;&#x4E00;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x4E3A;&#x670D;&#x52A1;&#x5668;&#x7ED1;&#x5B9A;&#x57DF;&#x540D;&#xFF0C;&#x7136;&#x540E;&#x5F00;&#x59CB;&#x529F;&#x80FD;&#x4E0A;&#x7684;&#x5F00;&#x53D1;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4.1.html" class="navigation navigation-prev " aria-label="Previous page: 4.1 搭建服务器环境">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4.3.html" class="navigation navigation-next " aria-label="Next page: 4.3 设置域名解析">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.2 部署框架代码到服务器","level":"2.7.2","depth":2,"next":{"title":"4.3 设置域名解析","level":"2.7.3","depth":2,"path":"md/4.3.md","ref":"md/4.3.md","articles":[]},"previous":{"title":"4.1 搭建服务器环境","level":"2.7.1","depth":2,"path":"md/4.1.md","ref":"md/4.1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","anchors","github","github-buttons","sharing-plus","-anchor-navigation-ex","code","search-pro","-lunr","-search","-tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"是xt写的，","modify_label":"上次修改：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/xtzero"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true},"github-buttons":{},"sharing":{"douban":true,"facebook":false,"google":false,"pocket":false,"qq":true,"qzone":true,"twitter":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"xt","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"论文","language":"zh-hans","gitbook":"3.2.3","description":"一个论文"},"file":{"path":"md/4.2.md","mtime":"2019-05-22T15:43:40.276Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T10:42:47.156Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

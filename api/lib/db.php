@@ -2,7 +2,7 @@
 class db{
     private $db_host;                                           //数据库域名
     private $db_usr     =           'root';                     //数据库用户名
-    private $db_pwd     =           '0587';                     //数据库密码
+    private $db_pwd     =           'QcloudDBlogin950211.';     //数据库密码
     private $db;                                                //当前数据库链接
     private static $obj =           null;                       //属性值为对象,默认为null
 

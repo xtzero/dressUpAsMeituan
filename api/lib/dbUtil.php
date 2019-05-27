@@ -83,20 +83,26 @@ class goodsModel{
 	/**
 	 * 添加商品
 	 */
-	public static function addGoods($name,$price,$image = '',$shopId){
+	public static function addGoods($name,$price,$image = '',$shopId,$describe = ''){
 		$today = date('Y-m-d H:i:s',time());
-		$res = db::init() -> query("INSERT INTO goods(shopId,name,create_at,price,image,valid) VALUES({$shopId},'{$name}','{$today}',{$price},'{$image}',1);");
+		$sql = "INSERT INTO goods(shopId,`name`,create_at,price,image,valid,`describe`) VALUES({$shopId},'{$name}','{$today}',{$price},'{$image}',1,'{$describe}');";
+		$res = db::init() -> query($sql);
 		return (bool)$res;
 	}
 
 	/**
 	 * 列出商品
 	 */
-	public static function listGoods($shopId,$page,$pageLimit){
+	public static function listGoods($shopId = FALSE,$page = 1,$pageLimit = 1000000){
 		$beginIndex = ($page - 1) * $pageLimit;
 
 		//要取到所有的商品
-		$sql = "SELECT * FROM goods WHERE shopId={$shopId} AND valid=1 LIMIT {$beginIndex},{$pageLimit}";
+        if ($shopId) {
+            $sql = "SELECT * FROM goods WHERE shopId={$shopId} AND valid=1 LIMIT {$beginIndex},{$pageLimit}";
+        } else {
+            $sql = "SELECT * FROM goods WHERE valid=1 LIMIT {$beginIndex},{$pageLimit}";
+        }
+
 		$goodsArr = db::init() -> query($sql,true);
 
 		if($goodsArr){
@@ -104,6 +110,16 @@ class goodsModel{
 			$goodIdsStr = implode(',',array_keys(keyToIndex($goodsArr,'id')));
 			$goodsArr = self::calcPrice($goodsArr);
 		}
+
+		$shopsSql = "SELECT * FROM shop WHERE id IN ({$goodIdsStr});";
+		$shops = db::init() -> query($shopsSql, true);
+
+		if ($shops) {
+		    $shops = keyToIndex($shops, 'id');
+		    foreach ($goodsArr as $k => $v) {
+		        $goodsArr[$k]['shopname'] = $shops[$v['shopId']]['name'];
+            }
+        }
 
 		return $goodsArr;
 	}
@@ -175,6 +191,10 @@ class goodsModel{
 				$goodsArr[$k]['priceChangeBeginAt'] = $allPriceControls_[$v['id']]['begin_at'];
 				//结束时间
 				$goodsArr[$k]['priceChangeEndAt'] = $allPriceControls_[$v['id']]['end_at'];
+
+                $goodsArr[$k]['priceChangePrice'] = $allPriceControls_[$v['id']]['price'];
+                $goodsArr[$k]['priceChangeType'] = $allPriceControls_[$v['id']]['type'];
+                $goodsArr[$k]['priceChangeIncOrDec'] = $allPriceControls_[$v['id']]['incOrDec'];
 			}
 		}
 
@@ -356,8 +376,13 @@ class orderModel{
 	/**
 	 * 订单列表
 	 */
-	public static function listOrder($userid){
-		$sql = "SELECT * FROM `order` WHERE userid={$userid} AND valid=1";
+	public static function listOrder($userid = false){
+	    if ($userid) {
+            $sql = "SELECT * FROM `order` WHERE userid={$userid} AND valid=1";
+        } else {
+            $sql = "SELECT * FROM `order` WHERE valid=1";
+        }
+
 		$res = db::init()->query($sql,true);
 
 		if($res){
@@ -379,14 +404,14 @@ class orderModel{
  * 商店相关
  */
 class shopModel{
-	public static function addShop($name){
-		$sql = "INSERT INTO shop(name,create_at,valid) VALUES('{$name}',now(),1);";
+	public static function addShop($name,$notice = ''){
+		$sql = "INSERT INTO shop(name,notice,create_at,valid) VALUES('{$name}','{$notice}',now(),1);";
 		$res = db::init() -> query($sql);
 		return (bool)$res;
 	}
 
 	public static function listShop($page = 1,$pageLimit = 10){
-		$fields = 'id,name,create_at';
+		$fields = 'id,name,notice,create_at';
 		if($page == "ALL"){
 			$sql = "SELECT {$fields} FROM shop WHERE valid=1;";
 		}else{
@@ -414,6 +439,12 @@ class shopModel{
 			return false;
 		}
 	}
+
+	public static function editShopInfo($shopId,$key,$value){
+	    $sql = "UPDATE shop SET {$key}='{$value}' WHERE id={$shopId};";
+	    $res = db::init() -> query($sql);
+	    return $res;
+    }
 }
 
 /**
@@ -468,6 +499,13 @@ class userModel{
 			return 1;
 		}
 	}
+
+	public static function listAllUser(){
+	    $sql = "SELECT * FROM user";
+	    $res = db::init() -> query($sql,true);
+
+	    return $res;
+    }
 }
 
 /**

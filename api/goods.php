@@ -12,7 +12,8 @@ class goods extends entry{
 			'listGoods',
 			'deleteGoods',
 			'addPriceControl',
-			'deletePriceControl'
+			'deletePriceControl',
+            'listAllGoods'
 		])){
 			$this->{$this->method}();
 		}else{
@@ -24,11 +25,11 @@ class goods extends entry{
 	 * 添加商品
 	 */
 	private function addGoods(){
-		$this->param('shopId,name,price,*image');
+		$this->param('shopId,name,*describe,price,*image');
 		$this->checkToken();
 		$this->checkUserType('admin');
 
-		$res = goodsModel::addGoods($this->name,$this->price,$this->image,$this->shopId);
+		$res = goodsModel::addGoods($this->name,$this->price,$this->image,$this->shopId,$this->describe);
 		if($res){
 			ajax(0,'成功');
 		}else{
@@ -53,7 +54,7 @@ class goods extends entry{
 		$this->checkToken();
 		$this->checkUserType('admin');
 
-		$res = goodsModel::deleteGoods($this->goodsId);
+		$res = goodsModel::deleteGoods($this->goodId);
 		if($res){
 			ajax(0,'成功');
 		}else{
@@ -92,6 +93,19 @@ class goods extends entry{
 			ajax(-1,'系统繁忙，请稍后重试');
 		}
 	}
+
+	public function listAllGoods() {
+	    $this->checkToken();
+	    $this->checkUserType('admin');
+
+	    $res = goodsModel::listGoods(false,1,1000000);
+
+        if($res){
+            ajax(0,'成功',$res);
+        }else{
+            ajax(-1,'系统繁忙，请稍后重试');
+        }
+    }
 }
 
 runApp();

@@ -1,0 +1,50 @@
+{
+    "title": "论文",
+    "author": "xt",
+    "description": "一个论文",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "structure": {
+        "readme": "README.md"
+    },
+    
+    "plugins": [
+        "-sharing",
+        "splitter",
+        "anchors",
+        "github",
+        "github-buttons",
+        "sharing-plus",
+        "-anchor-navigation-ex",
+        "code",
+        "search-pro",
+        "-lunr", 
+        "-search",
+        "-tbfed-pagefooter"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/xtzero"
+        },
+        "anchor-navigation-ex": {
+            "showLevel": true
+        },
+
+        "sharing": {
+            "douban": true,
+            "facebook": false,
+            "google": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "twitter": false,
+            "weibo": true
+      },
+      "tbfed-pagefooter": {
+           "copyright":"是xt写的，",
+           "modify_label": "上次修改：",
+           "modify_format": "YYYY-MM-DD HH:mm:ss"
+       }
+        
+    }
+}

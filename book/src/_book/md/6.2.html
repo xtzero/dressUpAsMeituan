@@ -1,0 +1,1902 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.2 后端接口开发 · 论文</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xt">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.2.html" />
+    
+    
+    <link rel="prev" href="6.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    请读我
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="0.0.html">
+            
+                <a href="0.0.html">
+            
+                    
+                    标题和封皮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="0.1.html">
+            
+                <a href="0.1.html">
+            
+                    
+                    摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="README.md">
+            
+                <span>
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    第1章 需求分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.1 用户需求分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.2 需求列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    第2章 开发技术及开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.1 技术架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.2 app端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.3 管理端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.4 后端技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.5 数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.6 域名与服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.7 开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    第3章 产品设计阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3.1 可行性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3.2 系统流程设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3.3 系统功能设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3.4 用户用例图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" >
+            
+                <span>
+            
+                    
+                    第4章 开发准备与开发前设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" data-path="4.1.html">
+            
+                <a href="4.1.html">
+            
+                    
+                    4.1 搭建服务器环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" data-path="4.2.html">
+            
+                <a href="4.2.html">
+            
+                    
+                    4.2 部署框架代码到服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="4.3.html">
+            
+                <a href="4.3.html">
+            
+                    
+                    4.3 设置域名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    第5章 数据库设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5.1 概念结构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5.2 逻辑结构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.3" >
+            
+                <span>
+            
+                    
+                    5.3 数据库的物理实现
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    第6章 编码开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.9.1" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1 后端架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.2" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.1 框架结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.3" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.2 程序入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.4" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.3 数据库类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.5" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.4 参数验证方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.5 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.7" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.6 函数库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.8" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.7 登录与权限验证机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2 后端接口开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.10.1" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.1 登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.2 店铺 - 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.3" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.3 店铺 - 查看店铺详情与物品列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.4" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.4 订单 - 创建订单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.5" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.5 订单 - 查看订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.6" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.5 用户 - 查看基本信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.7" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.6 用户 - 修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.8" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.7 用户 - 查看全部收货地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.9" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.8 用户 - 管理收货地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.10" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.9 后台 - 创建店铺
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.11" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.10 后台 - 修改店铺信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.12" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.11 后台 - 添加物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.13" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.12 后台 - 删除物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.14" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.13 后台 - 查看订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.15" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.14 后台 - 查看所有用户列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10.16" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.15 后台 - 修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3 app端前端页面与逻辑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.11.1" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.1 登录与登录凭证保存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.2" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.2 标题和导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.3 用户首页和订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.4" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.4 店铺列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.5" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.5 店铺详情和物品列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.6" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.6 创建订单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.7" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.7 用户信息修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.8" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.8 订单详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.9" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.9 收货地址选择和管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4 后台管理端前端页面与逻辑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.12.1" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.1 登录机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.2" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.2 导航和路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.3" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.3 订单管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.4" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.4 店铺管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.5" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.5 物品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12.6" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.6 用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    第7章 软件测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.13.1" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.1 功能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.2" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.2 可用性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.3" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.3 测试结果分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="n1.html">
+            
+                <a href="n1.html">
+            
+                    
+                    结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="n2.html">
+            
+                <a href="n2.html">
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="n3.html">
+            
+                <a href="n3.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.2 后端接口开发</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="62-&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x5F00;&#x53D1;"><a name="62-&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x5F00;&#x53D1;" class="plugin-anchor" href="#62-&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x5F00;&#x53D1;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2 &#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x5F00;&#x53D1;</h2>
+<p>&#x672C;&#x8282;&#x5C06;&#x4F1A;&#x4ECE;&#x540E;&#x7AEF;&#x7684;&#x89D2;&#x5EA6;&#x51FA;&#x53D1;&#xFF0C;&#x5B8C;&#x6574;&#x63CF;&#x8FF0;&#x6BCF;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5728;&#x516C;&#x5171;&#x51FD;&#x6570;&#x5E93;<code>lib/common.php</code>&#x4E2D;&#x8FD8;&#x6709;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4E13;&#x95E8;&#x8D1F;&#x8D23;&#x5411;&#x524D;&#x7AEF;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5305;&#x3002;</p>
+<pre><code class="lang-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ajax</span><span class="hljs-params">($code,$msg,$data = [])</span></span>{
+    <span class="hljs-keyword">echo</span> json_encode([
+        <span class="hljs-string">&apos;code&apos;</span> =&gt; $code,
+        <span class="hljs-string">&apos;msg&apos;</span> =&gt; $msg,
+        <span class="hljs-string">&apos;data&apos;</span> =&gt; $data
+    ]);
+    <span class="hljs-keyword">die</span>();
+}
+</code></pre>
+<p>&#x5728;&#x6BCF;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x90FD;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F5C;&#x4E3A;&#x7A0B;&#x5E8F;&#x7684;&#x51FA;&#x53E3;&#xFF0C;&#x5411;&#x524D;&#x7AEF;&#x8FD4;&#x56DE;json&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="621-&#x767B;&#x5F55;"><a name="621-&#x767B;&#x5F55;" class="plugin-anchor" href="#621-&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.1 &#x767B;&#x5F55;</h3>
+<p>&#x767B;&#x5F55;&#x63A5;&#x53E3;&#x63A5;&#x6536;&#x524D;&#x7AEF;&#x4F20;&#x5165;&#x7684;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x5C06;&#x5BC6;&#x7801;&#x52A0;&#x5BC6;&#x540E;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x5BC6;&#x7801;&#x6BD4;&#x5BF9;&#x3002;&#x5982;&#x679C;&#x6B63;&#x786E;&#xFF0C;&#x751F;&#x6210;&#x767B;&#x5F55;&#x51ED;&#x8BC1;token&#xFF0C;&#x8FD4;&#x56DE;&#x7ED9;&#x524D;&#x7AEF;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">login</span><span class="hljs-params">()</span></span>{
+    $this-&gt;param(<span class="hljs-string">&apos;usr,pwd&apos;</span>);
+    <span class="hljs-keyword">if</span>(accountModel::ifUserExist($this-&gt;usr)){
+        <span class="hljs-keyword">if</span>($userinfo = accountModel::usrConfirm($this-&gt;usr,$this-&gt;pwd,<span class="hljs-keyword">true</span>)){
+            $today = date(<span class="hljs-string">&apos;Y-m-d H:i:s&apos;</span>,time());
+            $token = md5($this-&gt;usr.<span class="hljs-string">&apos;|&apos;</span>.$today);
+            $res = tokenModel::saveToken($token,$userinfo[<span class="hljs-string">&apos;id&apos;</span>]);
+            <span class="hljs-keyword">if</span>($res){
+                $userinfo = tokenModel::getTokenInfo($token);
+                <span class="hljs-keyword">if</span>($userinfo){
+                    $userinfo[<span class="hljs-string">&apos;token&apos;</span>] = $token;
+                    ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,$userinfo);
+                }<span class="hljs-keyword">else</span>{
+                    ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x63D2;&#x5165;&#x6570;&#x636E;&#x65F6;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>,[<span class="hljs-string">&apos;ret&apos;</span> =&gt; <span class="hljs-number">-1</span>]);
+                }
+            }<span class="hljs-keyword">else</span>{
+                ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x63D2;&#x5165;&#x6570;&#x636E;&#x65F6;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>,[<span class="hljs-string">&apos;ret&apos;</span> =&gt; <span class="hljs-number">-2</span>]);
+            }
+        }<span class="hljs-keyword">else</span>{
+            ajax(<span class="hljs-number">2</span>,<span class="hljs-string">&apos;&#x7528;&#x6237;&#x540D;&#x6216;&#x5BC6;&#x7801;&#x4E0D;&#x6B63;&#x786E;&apos;</span>);
+        }
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;&#x7528;&#x6237;&#x4E0D;&#x5B58;&#x5728;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ifUserExist</span><span class="hljs-params">($usr)</span></span>{
+    $res = db::init() -&gt; query(<span class="hljs-string">&quot;SELECT * FROM user WHERE usr=&apos;{$usr}&apos; AND valid=1&quot;</span>,<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">if</span>($res){
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">usrConfirm</span><span class="hljs-params">($usr,$pwd,$returnUserInfo = false)</span></span>{
+    $pwd = md5(md5($pwd));
+    $res = db::init() -&gt; query(<span class="hljs-string">&quot;SELECT * FROM user WHERE usr=&apos;{$usr}&apos; AND pwd=&apos;{$pwd}&apos; AND valid=1;&quot;</span>,<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">if</span>($res){
+        <span class="hljs-keyword">if</span>($returnUserInfo){
+            <span class="hljs-keyword">return</span> $res[<span class="hljs-number">0</span>];
+        }<span class="hljs-keyword">else</span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">saveToken</span><span class="hljs-params">($token,$userid)</span></span>{
+    $today = date(<span class="hljs-string">&apos;Y-m-d H:i:s&apos;</span>,time());
+    $sevenDaysAfter = date(<span class="hljs-string">&apos;Y-m-d H:i:s&apos;</span>,time() + <span class="hljs-number">604800</span>);
+    $res = db::init() -&gt; query(<span class="hljs-string">&quot;INSERT INTO token(userid,token,create_at,die_at) VALUES({$userid},&apos;{$token}&apos;,&apos;{$today}&apos;,&apos;{$sevenDaysAfter}&apos;);&quot;</span>);
+    <span class="hljs-keyword">if</span>($res){
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTokenInfo</span><span class="hljs-params">($token)</span></span>{
+    $today = date(<span class="hljs-string">&apos;Y-m-d H:i:s&apos;</span>,time());
+    $fields = <span class="hljs-string">&apos;user.id as userid,user.usr,user.nickname,user.icon,user.type&apos;</span>;
+    $res = db::init() -&gt; query(<span class="hljs-string">&quot;SELECT {$fields} FROM token LEFT JOIN user ON token.userid=user.id WHERE token.token=&apos;{$token}&apos; AND token.die_at&gt;&apos;{$today}&apos; AND user.valid=1;&quot;</span>,<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">if</span>($res){
+        <span class="hljs-keyword">return</span> $res[<span class="hljs-number">0</span>];
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<h3 id="622-&#x5E97;&#x94FA;-&#x5217;&#x8868;"><a name="622-&#x5E97;&#x94FA;-&#x5217;&#x8868;" class="plugin-anchor" href="#622-&#x5E97;&#x94FA;-&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.2 &#x5E97;&#x94FA;-&#x5217;&#x8868;</h3>
+<p>&#x5E97;&#x94FA;&#x5217;&#x8868;&#x63A5;&#x53E3;&#x63A5;&#x6536;<code>page</code>&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x5206;&#x9875;&#x663E;&#x793A;&#x5E97;&#x94FA;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C;<code>page=ALL</code>&#xFF0C;&#x5219;&#x63A5;&#x6536;&#x5168;&#x90E8;&#x5E97;&#x94FA;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listShop</span><span class="hljs-params">()</span></span>{
+    $this -&gt; param(<span class="hljs-string">&apos;*page=ALL&apos;</span>);
+    $res = shopModel::listShop($this-&gt;page,<span class="hljs-number">10</span>);
+    ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,$res);
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listShop</span><span class="hljs-params">($page = <span class="hljs-number">1</span>,$pageLimit = <span class="hljs-number">10</span>)</span></span>{
+    $fields = <span class="hljs-string">&apos;id,name,notice,create_at&apos;</span>;
+    <span class="hljs-keyword">if</span>($page == <span class="hljs-string">&quot;ALL&quot;</span>){
+        $sql = <span class="hljs-string">&quot;SELECT {$fields} FROM shop WHERE valid=1;&quot;</span>;
+    }<span class="hljs-keyword">else</span>{
+        $beginIndex = ($page - <span class="hljs-number">1</span>) * $pageLimit;
+        $sql = <span class="hljs-string">&quot;SELECT {$fields} FROM shop WHERE valid=1 LIMIT {$beginIndex},{$pageLimit};&quot;</span>;
+    }
+
+
+    $res = db::init() -&gt; query($sql,<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">return</span> $res;
+}
+</code></pre>
+<h3 id="623-&#x5E97;&#x94FA;---&#x67E5;&#x770B;&#x5E97;&#x94FA;&#x8BE6;&#x60C5;&#x4E0E;&#x7269;&#x54C1;&#x5217;&#x8868;"><a name="623-&#x5E97;&#x94FA;---&#x67E5;&#x770B;&#x5E97;&#x94FA;&#x8BE6;&#x60C5;&#x4E0E;&#x7269;&#x54C1;&#x5217;&#x8868;" class="plugin-anchor" href="#623-&#x5E97;&#x94FA;---&#x67E5;&#x770B;&#x5E97;&#x94FA;&#x8BE6;&#x60C5;&#x4E0E;&#x7269;&#x54C1;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.3 &#x5E97;&#x94FA; - &#x67E5;&#x770B;&#x5E97;&#x94FA;&#x8BE6;&#x60C5;&#x4E0E;&#x7269;&#x54C1;&#x5217;&#x8868;</h3>
+<p>&#x5E97;&#x94FA;&#x8BE6;&#x60C5;&#x4E0E;&#x7269;&#x54C1;&#x5217;&#x8868;&#x662F;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x88AB;&#x540C;&#x65F6;&#x8C03;&#x7528;&#x3002;&#x5E97;&#x94FA;&#x8BE6;&#x60C5;&#x63A5;&#x53E3;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5E97;&#x94FA;id&#xFF0C;&#x5E97;&#x94FA;id&#x6765;&#x81EA;&#x4E0A;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5728;&#x5E97;&#x94FA;&#x5217;&#x8868;&#x4E2D;&#x83B7;&#x53D6;&#x3002;&#x7269;&#x54C1;&#x5217;&#x8868;&#x540C;&#x6837;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5E97;&#x94FA;id&#xFF0C;&#x540C;&#x65F6;&#x63A5;&#x6536;page&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x5206;&#x9875;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getShopInfo</span><span class="hljs-params">()</span></span>{
+    $this-&gt;param(<span class="hljs-string">&apos;shopId&apos;</span>);
+
+    $res = shopModel::getShopInfo($this-&gt;shopId);
+    <span class="hljs-keyword">if</span>($res){
+        ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,$res);
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;&#x6CA1;&#x6709;&#x83B7;&#x53D6;&#x5230;&#x8FD9;&#x4E2A;&#x5E97;&#x94FA;&apos;</span>);
+    }
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listGoods</span><span class="hljs-params">()</span></span>{
+    $this -&gt; param(<span class="hljs-string">&apos;shopId,*page=1&apos;</span>);
+    $res = goodsModel::listGoods($this-&gt;shopId,$this-&gt;page,<span class="hljs-number">10</span>);
+    ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,$res);
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getShopInfo</span><span class="hljs-params">($shopId)</span></span>{
+    $sql = <span class="hljs-string">&quot;SELECT * FROM shop WHERE id={$shopId} AND valid=1;&quot;</span>;
+    $res = db::init() -&gt; query($sql,<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">if</span>($res){
+        <span class="hljs-keyword">return</span> $res[<span class="hljs-number">0</span>];
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listGoods</span><span class="hljs-params">($shopId = FALSE,$page = <span class="hljs-number">1</span>,$pageLimit = <span class="hljs-number">1000000</span>)</span></span>{
+    $beginIndex = ($page - <span class="hljs-number">1</span>) * $pageLimit;
+
+    <span class="hljs-comment">//&#x8981;&#x53D6;&#x5230;&#x6240;&#x6709;&#x7684;&#x5546;&#x54C1;</span>
+    <span class="hljs-keyword">if</span> ($shopId) {
+        $sql = <span class="hljs-string">&quot;SELECT * FROM goods WHERE shopId={$shopId} AND valid=1 LIMIT {$beginIndex},{$pageLimit}&quot;</span>;
+    } <span class="hljs-keyword">else</span> {
+        $sql = <span class="hljs-string">&quot;SELECT * FROM goods WHERE valid=1 LIMIT {$beginIndex},{$pageLimit}&quot;</span>;
+    }
+
+    $goodsArr = db::init() -&gt; query($sql,<span class="hljs-keyword">true</span>);
+
+    <span class="hljs-keyword">if</span>($goodsArr){
+        <span class="hljs-comment">//&#x6240;&#x6709;&#x5546;&#x54C1;id&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+        $goodIdsStr = implode(<span class="hljs-string">&apos;,&apos;</span>,array_keys(keyToIndex($goodsArr,<span class="hljs-string">&apos;id&apos;</span>)));
+        $goodsArr = <span class="hljs-keyword">self</span>::calcPrice($goodsArr);
+    }
+
+    $shopsSql = <span class="hljs-string">&quot;SELECT * FROM shop WHERE id IN ({$goodIdsStr});&quot;</span>;
+    $shops = db::init() -&gt; query($shopsSql, <span class="hljs-keyword">true</span>);
+
+    <span class="hljs-keyword">if</span> ($shops) {
+        $shops = keyToIndex($shops, <span class="hljs-string">&apos;id&apos;</span>);
+        <span class="hljs-keyword">foreach</span> ($goodsArr <span class="hljs-keyword">as</span> $k =&gt; $v) {
+            $goodsArr[$k][<span class="hljs-string">&apos;shopname&apos;</span>] = $shops[$v[<span class="hljs-string">&apos;shopId&apos;</span>]][<span class="hljs-string">&apos;name&apos;</span>];
+        }
+    }
+
+    <span class="hljs-keyword">return</span> $goodsArr;
+}
+</code></pre>
+<h3 id="624-&#x8BA2;&#x5355;---&#x521B;&#x5EFA;&#x8BA2;&#x5355;"><a name="624-&#x8BA2;&#x5355;---&#x521B;&#x5EFA;&#x8BA2;&#x5355;" class="plugin-anchor" href="#624-&#x8BA2;&#x5355;---&#x521B;&#x5EFA;&#x8BA2;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.4 &#x8BA2;&#x5355; - &#x521B;&#x5EFA;&#x8BA2;&#x5355;</h3>
+<p>&#x521B;&#x5EFA;&#x8BA2;&#x5355;&#x63A5;&#x6536;&#x7269;&#x54C1;&#x5217;&#x8868;&#x3001;&#x6536;&#x8D27;&#x4EBA;&#x3001;&#x6536;&#x8D27;&#x4EBA;&#x624B;&#x673A;&#x53F7;&#x3001;&#x6536;&#x8D27;&#x5730;&#x5740;&#x3002;&#x4F1A;&#x5728;&#x6A21;&#x578B;&#x4E2D;&#x5224;&#x65AD;&#x6BCF;&#x4E2A;&#x5546;&#x54C1;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x8BA1;&#x7B97;&#x4EF7;&#x683C;&#x540E;&#x5C06;&#x8BA2;&#x5355;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createOrder</span><span class="hljs-params">()</span>
+</span>{
+    $this-&gt;param(<span class="hljs-string">&apos;goodsList,name,*phone,*addr=eat_in_shop&apos;</span>);
+    $this-&gt;checkToken();
+
+    <span class="hljs-keyword">if</span> ($this-&gt;addr != <span class="hljs-string">&apos;eat_in_shop&apos;</span> &amp;&amp; !$this-&gt;phone) {
+        ajax(<span class="hljs-number">-2</span>, <span class="hljs-string">&apos;&#x8BF7;&#x586B;&#x5199;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;&apos;</span>);
+    }
+
+    $res = orderModel::createOrder($this-&gt;goodsList, $this-&gt;__userinfo[<span class="hljs-string">&apos;userid&apos;</span>], $this-&gt;name, $this-&gt;phone, $this-&gt;addr);
+    <span class="hljs-keyword">switch</span> ($res) {
+        <span class="hljs-keyword">case</span> <span class="hljs-number">-1</span>:
+            ajax(<span class="hljs-number">-1</span>, <span class="hljs-string">&apos;&#x521B;&#x5EFA;&#x8BA2;&#x5355;&#x65F6;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>);
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+            ajax(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;&#x8BA2;&#x5355;&#x4E2D;&#x6709;&#x5DF2;&#x4E0B;&#x67B6;&#x5546;&#x54C1;&#xFF0C;&#x8BF7;&#x91CD;&#x65B0;&#x6DFB;&#x52A0;&apos;</span>);
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+            ajax(<span class="hljs-number">2</span>, <span class="hljs-string">&apos;&#x4F59;&#x989D;&#x4E0D;&#x8DB3;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x5E97;&#x5BB6;&#x5145;&#x503C;&apos;</span>);
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+            ajax(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;&#x521B;&#x5EFA;&#x8BA2;&#x5355;&#x6210;&#x529F;&apos;</span>, [
+                <span class="hljs-string">&apos;orderId&apos;</span> =&gt; $res
+            ]);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createOrder</span><span class="hljs-params">($goodIds,$userid,$name,$phone,$addr)</span></span>{
+    $orderId = appendOrderId();
+    $goodsArr = db::init() -&gt; query(<span class="hljs-string">&quot;SELECT * FROM goods WHERE id IN ({$goodIds}) AND valid=1;&quot;</span>,<span class="hljs-keyword">true</span>);
+    $goodsIdsValidIs1 = implode(<span class="hljs-string">&apos;,&apos;</span>,array_keys(keyToIndex($goodsArr,<span class="hljs-string">&apos;id&apos;</span>)));
+    <span class="hljs-keyword">if</span>(strlen($goodIds) == strlen($goodsIdsValidIs1)){
+        <span class="hljs-comment">//&#x8BA1;&#x7B97;&#x597D;&#x7684;&#x5546;&#x54C1;&#x5217;&#x8868;</span>
+        $goodsArr_ = goodsModel::calcPrice($goodsArr);
+
+        <span class="hljs-comment">//&#x8BA1;&#x7B97;&#x539F;&#x4EF7;&#x548C;&#x8BA2;&#x5355;&#x4EF7;</span>
+        $oriPrice = <span class="hljs-number">0</span>;
+        $price = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">foreach</span>($goodsArr_ <span class="hljs-keyword">as</span> $k =&gt; $v){
+            $oriPrice += $v[<span class="hljs-string">&apos;price&apos;</span>];
+
+            <span class="hljs-keyword">if</span>($v[<span class="hljs-string">&apos;newPrice&apos;</span>]){
+                $price += $v[<span class="hljs-string">&apos;newPrice&apos;</span>];
+            }<span class="hljs-keyword">else</span>{
+                $price += $v[<span class="hljs-string">&apos;price&apos;</span>];
+            }
+        }
+
+        <span class="hljs-keyword">if</span>(moneyModel::disMoney($userid,$price,$reason = <span class="hljs-string">&apos;system dis&apos;</span>) === <span class="hljs-number">0</span>){
+            <span class="hljs-comment">//&#x4FDD;&#x5B58;&#x8BA2;&#x5355;&#x4FE1;&#x606F;</span>
+            $saveOrderSql = <span class="hljs-string">&quot;INSERT INTO `order`(id,userid,create_at,ori_price,price,name,phone,addr) VALUES(&apos;{$orderId}&apos;,{$userid},now(),{$oriPrice},{$price},&apos;{$name}&apos;,&apos;{$phone}&apos;,&apos;{$addr}&apos;);&quot;</span>;
+            $saveOrder = db::init() -&gt; query($saveOrderSql);
+
+            <span class="hljs-comment">//&#x4FDD;&#x5B58;&#x8BA2;&#x5355;&#x7269;&#x54C1;&#x4FE1;&#x606F;</span>
+            $saveOrderGoodsSql = <span class="hljs-string">&quot;INSERT INTO `order_goods`(orderId,goodId,create_at,ori_price,price) VALUES&quot;</span>;
+            $saveOrderGoodsSqlTailArr = [];
+            <span class="hljs-keyword">foreach</span>($goodsArr_ <span class="hljs-keyword">as</span> $k =&gt; $v){
+                <span class="hljs-keyword">if</span>($v[<span class="hljs-string">&apos;newPrice&apos;</span>]){
+                    $price = $v[<span class="hljs-string">&apos;newPrice&apos;</span>];
+                }<span class="hljs-keyword">else</span>{
+                    $price = $v[<span class="hljs-string">&apos;price&apos;</span>];
+                }
+
+                $oriPrice = $v[<span class="hljs-string">&apos;price&apos;</span>];
+
+                array_push($saveOrderGoodsSqlTailArr,<span class="hljs-string">&quot;(&apos;{$orderId}&apos;,{$v[&apos;id&apos;]},now(),{$oriPrice},{$price})&quot;</span>);
+            }
+
+            $saveOrderGoodsSql .= implode(<span class="hljs-string">&apos;,&apos;</span>,$saveOrderGoodsSqlTailArr);
+            $saveOrderGoods = db::init() -&gt; query($saveOrderGoodsSql);
+
+            <span class="hljs-keyword">if</span>($saveOrder &amp;&amp; $saveOrderGoods){
+                <span class="hljs-keyword">return</span> $orderId;
+            }<span class="hljs-keyword">else</span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+            }        
+        }<span class="hljs-keyword">else</span>{
+            <span class="hljs-comment">//&#x4F59;&#x989D;&#x4E0D;&#x8DB3;</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span>;
+        }
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-comment">//&#x6709;&#x5546;&#x54C1;&#x5DF2;&#x4E0B;&#x67B6;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+}
+</code></pre>
+<h3 id="625-&#x8BA2;&#x5355;---&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;"><a name="625-&#x8BA2;&#x5355;---&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;" class="plugin-anchor" href="#625-&#x8BA2;&#x5355;---&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.5 &#x8BA2;&#x5355; - &#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;</h3>
+<p>&#x8BA2;&#x5355;&#x5217;&#x8868;&#x8981;&#x6C42;&#x767B;&#x5F55;&#x72B6;&#x6001;&#xFF0C;&#x6839;&#x636E;&#x5F53;&#x524D;&#x7684;&#x767B;&#x5F55;&#x7528;&#x6237;&#xFF0C;&#x83B7;&#x53D6;&#x8BA2;&#x5355;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listMyOrder</span><span class="hljs-params">()</span>
+</span>{
+    $this-&gt;checkToken();
+    $res = orderModel::listOrder($this-&gt;__userinfo[<span class="hljs-string">&apos;userid&apos;</span>]);
+
+    <span class="hljs-keyword">if</span> ($res) {
+        ajax(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>, $res);
+    } <span class="hljs-keyword">else</span> {
+        ajax(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6570;&#x636E;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listOrder</span><span class="hljs-params">($userid = false)</span></span>{
+    <span class="hljs-keyword">if</span> ($userid) {
+        $sql = <span class="hljs-string">&quot;SELECT * FROM `order` WHERE userid={$userid} AND valid=1&quot;</span>;
+    } <span class="hljs-keyword">else</span> {
+        $sql = <span class="hljs-string">&quot;SELECT * FROM `order` WHERE valid=1&quot;</span>;
+    }
+
+    $res = db::init()-&gt;query($sql,<span class="hljs-keyword">true</span>);
+
+    <span class="hljs-keyword">if</span>($res){
+        <span class="hljs-keyword">foreach</span>($res <span class="hljs-keyword">as</span> $k =&gt; $v){
+            $orderId = $v[<span class="hljs-string">&apos;id&apos;</span>];
+            $goodSql = <span class="hljs-string">&quot;SELECT * FROM order_goods og LEFT JOIN goods AS g ON og.goodId=g.id WHERE og.orderId=&apos;{$orderId}&apos;;&quot;</span>;
+            $goods = db::init() -&gt; query($goodSql,<span class="hljs-keyword">true</span>);
+            $res[$k][<span class="hljs-string">&apos;goods&apos;</span>] = $goods;
+        }    
+
+        <span class="hljs-keyword">return</span> $res;
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<h3 id="625-&#x7528;&#x6237;---&#x67E5;&#x770B;&#x57FA;&#x672C;&#x4FE1;&#x606F;"><a name="625-&#x7528;&#x6237;---&#x67E5;&#x770B;&#x57FA;&#x672C;&#x4FE1;&#x606F;" class="plugin-anchor" href="#625-&#x7528;&#x6237;---&#x67E5;&#x770B;&#x57FA;&#x672C;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.5 &#x7528;&#x6237; - &#x67E5;&#x770B;&#x57FA;&#x672C;&#x4FE1;&#x606F;</h3>
+<p>&#x67E5;&#x770B;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x63A5;&#x53E3;&#x8981;&#x6C42;&#x6709;&#x767B;&#x5F55;&#x72B6;&#x6001;&#xFF0C;&#x63A5;&#x53E3;&#x4F1A;&#x6839;&#x636E;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x53BB;&#x83B7;&#x53D6;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUserInfo</span><span class="hljs-params">()</span></span>{
+    $this-&gt;param(<span class="hljs-string">&apos;*field=all&apos;</span>);
+    $this-&gt;checkToken();
+    $res = userModel::getUserInfo($this-&gt;__userinfo[<span class="hljs-string">&apos;userid&apos;</span>],$this-&gt;field);
+    <span class="hljs-keyword">if</span>($res){
+        ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,$res);
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;&#x6CA1;&#x6709;&#x67E5;&#x8BE2;&#x5230;&#x7ED3;&#x679C;&apos;</span>,$this-&gt;__userinfo);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUserInfo</span><span class="hljs-params">($userid,$field = <span class="hljs-string">&apos;*&apos;</span>)</span></span>{
+    <span class="hljs-keyword">if</span>($field == <span class="hljs-string">&apos;all&apos;</span>){
+        $field = <span class="hljs-string">&apos;id,usr,nickname,icon,restMoney&apos;</span>;
+    }
+
+    $sql = <span class="hljs-string">&quot;SELECT {$field} FROM user WHERE id={$userid} AND valid=1;&quot;</span>;
+    $res = db::init() -&gt; query($sql,<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">if</span>($res){
+        <span class="hljs-keyword">return</span> $res[<span class="hljs-number">0</span>];
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<h3 id="626-&#x7528;&#x6237;---&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;"><a name="626-&#x7528;&#x6237;---&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;" class="plugin-anchor" href="#626-&#x7528;&#x6237;---&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.6 &#x7528;&#x6237; - &#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;</h3>
+<p>&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x63A5;&#x53D7;&#x5B57;&#x6BB5;&#x540D;&#x548C;&#x65B0;&#x7684;&#x5B57;&#x6BB5;&#x503C;&#x3002;&#x5E76;&#x4E14;&#x8981;&#x5728;&#x63A5;&#x53E3;&#x63A5;&#x53D7;&#x53C2;&#x6570;&#x540E;&#x8FDB;&#x884C;&#x9650;&#x5236;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x4E00;&#x4E9B;&#x9AD8;&#x5371;&#x7684;&#x5B57;&#x6BB5;&#x503C;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setUserInfo</span><span class="hljs-params">()</span></span>{
+    $this-&gt;checkToken();
+    $this-&gt;param(<span class="hljs-string">&apos;key,value,*userid&apos;</span>);
+    <span class="hljs-keyword">if</span>(in_array($this-&gt;key,[
+        <span class="hljs-string">&apos;nickname&apos;</span>,
+        <span class="hljs-string">&apos;icon&apos;</span>,
+        <span class="hljs-string">&apos;restMoney&apos;</span>
+    ])){
+        <span class="hljs-keyword">if</span> (!$userid) {
+            $this-&gt;userid = $this-&gt;__userinfo[<span class="hljs-string">&apos;userid&apos;</span>];
+        }
+        $res = userModel::setUserInfo($this-&gt;userid,$this-&gt;key,$this-&gt;value);
+        <span class="hljs-keyword">if</span>($res){
+            ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+        }<span class="hljs-keyword">else</span>{
+            ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>);
+        }
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;&#x4E0D;&#x652F;&#x6301;&#x4FEE;&#x6539;&#x7684;&#x9879;&#x76EE;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setUserInfo</span><span class="hljs-params">($userid,$key,$value)</span></span>{
+    $sql = <span class="hljs-string">&quot;UPDATE user SET {$key}=&apos;{$value}&apos; WHERE id={$userid} AND valid=1;&quot;</span>;
+    $res = db::init() -&gt; query($sql);
+    <span class="hljs-keyword">return</span> $res;
+}
+</code></pre>
+<h3 id="627-&#x7528;&#x6237;---&#x67E5;&#x770B;&#x5168;&#x90E8;&#x6536;&#x8D27;&#x5730;&#x5740;"><a name="627-&#x7528;&#x6237;---&#x67E5;&#x770B;&#x5168;&#x90E8;&#x6536;&#x8D27;&#x5730;&#x5740;" class="plugin-anchor" href="#627-&#x7528;&#x6237;---&#x67E5;&#x770B;&#x5168;&#x90E8;&#x6536;&#x8D27;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.7 &#x7528;&#x6237; - &#x67E5;&#x770B;&#x5168;&#x90E8;&#x6536;&#x8D27;&#x5730;&#x5740;</h3>
+<p>&#x4F1A;&#x6839;&#x636E;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x6765;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8BE5;&#x7528;&#x6237;&#x521B;&#x5EFA;&#x7684;&#x6536;&#x8D27;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listUserAddr</span><span class="hljs-params">()</span></span>{
+    $this-&gt;checkToken();
+    $res = userModel::getUserAddr($this-&gt;__userinfo[<span class="hljs-string">&apos;userid&apos;</span>]);
+    <span class="hljs-keyword">if</span>($res){
+        ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,$res);
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x83B7;&#x53D6;&#x5730;&#x5740;&#x5217;&#x8868;&#x5931;&#x8D25;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUserAddr</span><span class="hljs-params">($userid)</span></span>{
+    $sql = <span class="hljs-string">&quot;SELECT * FROM user_addr WHERE userid={$userid} AND valid=1;&quot;</span>;
+    $res = db::init() -&gt; query($sql,<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">if</span>($res){
+        <span class="hljs-keyword">return</span> $res;
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<h3 id="628-&#x7528;&#x6237;---&#x7BA1;&#x7406;&#x6536;&#x8D27;&#x5730;&#x5740;"><a name="628-&#x7528;&#x6237;---&#x7BA1;&#x7406;&#x6536;&#x8D27;&#x5730;&#x5740;" class="plugin-anchor" href="#628-&#x7528;&#x6237;---&#x7BA1;&#x7406;&#x6536;&#x8D27;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.8 &#x7528;&#x6237; - &#x7BA1;&#x7406;&#x6536;&#x8D27;&#x5730;&#x5740;</h3>
+<p>&#x5BF9;&#x6536;&#x8D27;&#x5730;&#x5740;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x5305;&#x542B;&#x6DFB;&#x52A0;&#x548C;&#x5220;&#x9664;&#x3002;&#x6DFB;&#x52A0;&#x6536;&#x8D27;&#x5730;&#x5740;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x6536;&#x8D27;&#x4EBA;&#x3001;&#x6536;&#x8D27;&#x5730;&#x5740;&#x3001;&#x8054;&#x7CFB;&#x4EBA;&#x624B;&#x673A;&#x53F7;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x5728;&#x67E5;&#x770B;&#x6536;&#x8D27;&#x5730;&#x5740;&#x65F6;&#x4F1A;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x5730;&#x5740;&#x7684;id&#xFF0C;&#x5220;&#x9664;&#x6536;&#x8D27;&#x5730;&#x5740;&#x65F6;&#x4F20;&#x5165;&#x8FD9;&#x4E2A;id&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addUserAddr</span><span class="hljs-params">()</span></span>{
+    $this-&gt;checkToken();
+    $this-&gt;param(<span class="hljs-string">&apos;addr,name,phone&apos;</span>);
+    $res = userModel::addUserAddr($this-&gt;__userinfo[<span class="hljs-string">&apos;userid&apos;</span>],$this-&gt;addr,$this-&gt;name,$this-&gt;phone);
+    <span class="hljs-keyword">if</span>($res){
+        ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x6DFB;&#x52A0;&#x5730;&#x5740;&#x5931;&#x8D25;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>);
+    }
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deleteUserAddr</span><span class="hljs-params">()</span></span>{
+    $this-&gt;checkToken();
+    $this-&gt;param(<span class="hljs-string">&apos;addrId&apos;</span>);
+    $res = userModel::deleteUserAddr($this-&gt;__userinfo[<span class="hljs-string">&apos;userid&apos;</span>],$this-&gt;addrId);
+    <span class="hljs-keyword">switch</span>($res){
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>: ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);<span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>: ajax(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;&#x8BE5;&#x5730;&#x5740;&#x4E0D;&#x5B58;&#x5728;&apos;</span>);<span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">-1</span>: ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x5220;&#x9664;&#x5730;&#x5740;&#x5931;&#x8D25;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>);<span class="hljs-keyword">break</span>;
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addUserAddr</span><span class="hljs-params">($userid,$addr,$name,$phone)</span></span>{
+    $sql = <span class="hljs-string">&quot;INSERT INTO user_addr(userid,addr,name,phone,valid,create_at) VALUES({$userid},&apos;{$addr}&apos;,&apos;{$name}&apos;,&apos;{$phone}&apos;,1,now());&quot;</span>;
+    $res = db::init() -&gt; query($sql);
+    <span class="hljs-keyword">return</span> $res;
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deleteUserAddr</span><span class="hljs-params">($userid,$addrId)</span></span>{
+    $ifBelongSql = <span class="hljs-string">&quot;SELECT id FROM user_addr WHERE id={$addrId} AND userid={$userid} AND valid=1;&quot;</span>;
+    $ifBelong = db::init() -&gt; query($ifBelongSql,<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">if</span>($ifBelong){
+        $sql = <span class="hljs-string">&quot;UPDATE user_addr SET valid=0 WHERE id={$addrId} AND valid=1&quot;</span>;
+        $res = db::init() -&gt; query($sql);
+        <span class="hljs-keyword">return</span> (bool)$res?<span class="hljs-number">0</span>:<span class="hljs-number">-1</span>;
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x4E0D;&#x5C5E;&#x4E8E;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x4E0D;&#x5B58;&#x5728;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+}
+</code></pre>
+<h3 id="629-&#x540E;&#x53F0;---&#x521B;&#x5EFA;&#x5E97;&#x94FA;"><a name="629-&#x540E;&#x53F0;---&#x521B;&#x5EFA;&#x5E97;&#x94FA;" class="plugin-anchor" href="#629-&#x540E;&#x53F0;---&#x521B;&#x5EFA;&#x5E97;&#x94FA;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.9 &#x540E;&#x53F0; - &#x521B;&#x5EFA;&#x5E97;&#x94FA;</h3>
+<p>&#x540E;&#x53F0;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x767B;&#x5F55;&#x6001;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x767B;&#x5F55;&#x6001;&#x5224;&#x65AD;&#x7528;&#x6237;&#x7C7B;&#x578B;&#x3002;&#x5F53;&#x7528;&#x6237;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x903B;&#x8F91;&#x3002;&#x521B;&#x5EFA;&#x5E97;&#x94FA;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x5E97;&#x94FA;&#x540D;&#x5B57;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x9009;&#x62E9;&#x5730;&#x63D0;&#x4F9B;&#x5E97;&#x94FA;&#x7684;&#x63CF;&#x8FF0;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addShop</span><span class="hljs-params">()</span></span>{
+    $this-&gt;param(<span class="hljs-string">&apos;name,*notice&apos;</span>);
+    $this-&gt;checkToken();
+    $this-&gt;checkUserType(<span class="hljs-string">&apos;admin&apos;</span>);
+
+    $res = shopModel::addShop($this-&gt;name,$this-&gt;notice);
+    <span class="hljs-keyword">if</span>($res){
+        ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x6DFB;&#x52A0;&#x5546;&#x54C1;&#x5931;&#x8D25;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addShop</span><span class="hljs-params">($name,$notice = <span class="hljs-string">&apos;&apos;</span>)</span></span>{
+    $sql = <span class="hljs-string">&quot;INSERT INTO shop(name,notice,create_at,valid) VALUES(&apos;{$name}&apos;,&apos;{$notice}&apos;,now(),1);&quot;</span>;
+    $res = db::init() -&gt; query($sql);
+    <span class="hljs-keyword">return</span> (bool)$res;
+}
+</code></pre>
+<h3 id="6210-&#x540E;&#x53F0;---&#x4FEE;&#x6539;&#x5E97;&#x94FA;&#x4FE1;&#x606F;"><a name="6210-&#x540E;&#x53F0;---&#x4FEE;&#x6539;&#x5E97;&#x94FA;&#x4FE1;&#x606F;" class="plugin-anchor" href="#6210-&#x540E;&#x53F0;---&#x4FEE;&#x6539;&#x5E97;&#x94FA;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.10 &#x540E;&#x53F0; - &#x4FEE;&#x6539;&#x5E97;&#x94FA;&#x4FE1;&#x606F;</h3>
+<p>&#x68C0;&#x67E5;&#x7528;&#x6237;&#x7C7B;&#x578B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x60F3;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x548C;&#x65B0;&#x7684;&#x503C;&#x3002;&#x63A7;&#x5236;&#x5668;&#x4F1A;&#x5BF9;&#x5B57;&#x6BB5;&#x503C;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#xFF0C;&#x53EA;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x6307;&#x5B9A;&#x7684;&#x51E0;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">editShopInfo</span><span class="hljs-params">()</span></span>{
+    $this-&gt;checkToken();
+    $this-&gt;param(<span class="hljs-string">&apos;shopId,key,value&apos;</span>);
+
+    <span class="hljs-keyword">if</span> (!in_array($this-&gt;key, [<span class="hljs-string">&apos;name&apos;</span>,<span class="hljs-string">&apos;descr&apos;</span>,<span class="hljs-string">&apos;notice&apos;</span>])) {
+        ajax(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&apos;</span>);
+    } <span class="hljs-keyword">else</span> {
+        $res = shopModel::editShopInfo($this-&gt;shopId, $this-&gt;key, $this-&gt;value);
+        <span class="hljs-keyword">if</span> ($res) {
+            ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+        } <span class="hljs-keyword">else</span> {
+            ajax(<span class="hljs-number">-1</span>, <span class="hljs-string">&apos;&#x4FEE;&#x6539;&#x5E97;&#x94FA;&#x4FE1;&#x606F;&#x65F6;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>);
+        }
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">editShopInfo</span><span class="hljs-params">($shopId,$key,$value)</span></span>{
+    $sql = <span class="hljs-string">&quot;UPDATE shop SET {$key}=&apos;{$value}&apos; WHERE id={$shopId};&quot;</span>;
+    $res = db::init() -&gt; query($sql);
+    <span class="hljs-keyword">return</span> $res;
+}
+</code></pre>
+<h3 id="6211-&#x540E;&#x53F0;---&#x6DFB;&#x52A0;&#x7269;&#x54C1;"><a name="6211-&#x540E;&#x53F0;---&#x6DFB;&#x52A0;&#x7269;&#x54C1;" class="plugin-anchor" href="#6211-&#x540E;&#x53F0;---&#x6DFB;&#x52A0;&#x7269;&#x54C1;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.11 &#x540E;&#x53F0; - &#x6DFB;&#x52A0;&#x7269;&#x54C1;</h3>
+<p>&#x6DFB;&#x52A0;&#x5546;&#x54C1;&#x9700;&#x8981;&#x5728;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x72B6;&#x6001;&#x540E;&#x63D0;&#x4F9B;&#x5E97;&#x94FA;id&#x3001;&#x7269;&#x54C1;&#x540D;&#x5B57;&#x3001;&#x4EF7;&#x683C;&#x3002;&#x5E76;&#x4E14;&#x6709;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x7269;&#x54C1;&#x63CF;&#x8FF0;&#x3001;&#x7269;&#x54C1;&#x56FE;&#x7247;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addGoods</span><span class="hljs-params">()</span></span>{
+    $this-&gt;param(<span class="hljs-string">&apos;shopId,name,*describe,price,*image&apos;</span>);
+    $this-&gt;checkToken();
+    $this-&gt;checkUserType(<span class="hljs-string">&apos;admin&apos;</span>);
+
+    $res = goodsModel::addGoods($this-&gt;name,$this-&gt;price,$this-&gt;image,$this-&gt;shopId,$this-&gt;describe);
+    <span class="hljs-keyword">if</span>($res){
+        ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x6DFB;&#x52A0;&#x5546;&#x54C1;&#x5931;&#x8D25;&#xFF0C;&#x8BF7;&#x7A0D;&#x540E;&#x91CD;&#x8BD5;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addGoods</span><span class="hljs-params">($name,$price,$image = <span class="hljs-string">&apos;&apos;</span>,$shopId,$describe = <span class="hljs-string">&apos;&apos;</span>)</span></span>{
+    $today = date(<span class="hljs-string">&apos;Y-m-d H:i:s&apos;</span>,time());
+    $sql = <span class="hljs-string">&quot;INSERT INTO goods(shopId,`name`,create_at,price,image,valid,`describe`) VALUES({$shopId},&apos;{$name}&apos;,&apos;{$today}&apos;,{$price},&apos;{$image}&apos;,1,&apos;{$describe}&apos;);&quot;</span>;
+    $res = db::init() -&gt; query($sql);
+    <span class="hljs-keyword">return</span> (bool)$res;
+}
+</code></pre>
+<h3 id="6212-&#x540E;&#x53F0;---&#x5220;&#x9664;&#x7269;&#x54C1;"><a name="6212-&#x540E;&#x53F0;---&#x5220;&#x9664;&#x7269;&#x54C1;" class="plugin-anchor" href="#6212-&#x540E;&#x53F0;---&#x5220;&#x9664;&#x7269;&#x54C1;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.12 &#x540E;&#x53F0; - &#x5220;&#x9664;&#x7269;&#x54C1;</h3>
+<p>&#x5220;&#x9664;&#x7269;&#x54C1;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x7269;&#x54C1;id&#xFF0C;&#x5220;&#x9664;&#x65F6;&#x53EA;&#x662F;&#x4FEE;&#x6539;&#x4E86;<code>valid</code>&#x5B57;&#x6BB5;&#xFF0C;&#x8BA9;&#x5217;&#x51FA;&#x7269;&#x54C1;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deleteGoods</span><span class="hljs-params">()</span></span>{
+    $this-&gt;param(<span class="hljs-string">&apos;goodId&apos;</span>);
+    $this-&gt;checkToken();
+    $this-&gt;checkUserType(<span class="hljs-string">&apos;admin&apos;</span>);
+
+    $res = goodsModel::deleteGoods($this-&gt;goodId);
+    <span class="hljs-keyword">if</span>($res){
+        ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x5931;&#x8D25;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deleteGoods</span><span class="hljs-params">($goodsId)</span></span>{
+    $sql = <span class="hljs-string">&quot;UPDATE goods SET valid=0 WHERE id={$goodsId};&quot;</span>;
+    $res = db::init() -&gt; query($sql);
+    <span class="hljs-keyword">return</span> $res;
+}
+</code></pre>
+<h3 id="6213-&#x540E;&#x53F0;---&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;"><a name="6213-&#x540E;&#x53F0;---&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;" class="plugin-anchor" href="#6213-&#x540E;&#x53F0;---&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.13 &#x540E;&#x53F0; - &#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;</h3>
+<p>&#x540E;&#x53F0;&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x5217;&#x8868;&#x4E0D;&#x4F1A;&#x6839;&#x636E;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x6001;&#x6765;&#x7B5B;&#x9009;&#x8BA2;&#x5355;&#xFF0C;&#x800C;&#x662F;&#x4F1A;&#x83B7;&#x53D6;&#x5168;&#x90E8;&#x7684;&#x8BA2;&#x5355;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">orderList</span><span class="hljs-params">()</span>
+</span>{
+    $this-&gt;checkToken();
+    $res = orderModel::listOrder();
+    <span class="hljs-keyword">if</span> ($res) {
+        ajax(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>, $res);
+    } <span class="hljs-keyword">else</span> {
+        ajax(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6570;&#x636E;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x4E0E;&#x7528;&#x6237;&#x7684;&#x8BA2;&#x5355;&#x5217;&#x8868;&#x5171;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E0D;&#x540C;&#xFF0C;&#x5B9E;&#x73B0;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
+<h3 id="6214-&#x540E;&#x53F0;---&#x67E5;&#x770B;&#x6240;&#x6709;&#x7528;&#x6237;&#x5217;&#x8868;"><a name="6214-&#x540E;&#x53F0;---&#x67E5;&#x770B;&#x6240;&#x6709;&#x7528;&#x6237;&#x5217;&#x8868;" class="plugin-anchor" href="#6214-&#x540E;&#x53F0;---&#x67E5;&#x770B;&#x6240;&#x6709;&#x7528;&#x6237;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.14 &#x540E;&#x53F0; - &#x67E5;&#x770B;&#x6240;&#x6709;&#x7528;&#x6237;&#x5217;&#x8868;</h3>
+<p>&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x4F1A;&#x83B7;&#x53D6;&#x5168;&#x90E8;&#x7684;&#x7528;&#x6237;&#x5217;&#x8868;&#x3002;&#x5F53;&#x7136;&#x83B7;&#x53D6;&#x4E4B;&#x524D;&#x8981;&#x68C0;&#x67E5;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x6001;&#x662F;&#x5426;&#x4E3A;&#x7BA1;&#x7406;&#x5458;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listAllUser</span><span class="hljs-params">()</span></span>{
+    $this-&gt;checkToken();
+    $this-&gt;checkUserType(<span class="hljs-string">&apos;admin&apos;</span>);
+
+    $res = userModel::listAllUser();
+    <span class="hljs-keyword">if</span>($res){
+        ajax(<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,$res);
+    }<span class="hljs-keyword">else</span>{
+        ajax(<span class="hljs-number">-1</span>,<span class="hljs-string">&apos;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6570;&#x636E;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x6A21;&#x578B;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listAllUser</span><span class="hljs-params">()</span></span>{
+    $sql = <span class="hljs-string">&quot;SELECT * FROM user&quot;</span>;
+    $res = db::init() -&gt; query($sql,<span class="hljs-keyword">true</span>);
+
+    <span class="hljs-keyword">return</span> $res;
+}
+</code></pre>
+<h3 id="6215-&#x540E;&#x53F0;---&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;"><a name="6215-&#x540E;&#x53F0;---&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;" class="plugin-anchor" href="#6215-&#x540E;&#x53F0;---&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2.15 &#x540E;&#x53F0; - &#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;</h3>
+<p>&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x63A5;&#x53E3;&#x548C;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x81EA;&#x5DF1;&#x4FE1;&#x606F;&#x7684;&#x63A5;&#x53E3;&#x5171;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x72B6;&#x6001;&#x662F;&#x7BA1;&#x7406;&#x5458;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4EFB;&#x4F55;&#x4EBA;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x7BA1;&#x7406;&#x5458;&#x5F00;&#x653E;&#x4FEE;&#x6539;<code>restMoney</code>&#x5B57;&#x6BB5;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x5373;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7528;&#x6237;&#x7684;&#x4F59;&#x989D;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.html" class="navigation navigation-prev " aria-label="Previous page: 6.1.7 登录与权限验证机制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.2.html" class="navigation navigation-next " aria-label="Next page: 6.2.1 登录">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.2 后端接口开发","level":"2.10","depth":1,"next":{"title":"6.2.1 登录","level":"2.10.1","depth":2,"path":"md/6.2.md","ref":"md/6.2.md","articles":[]},"previous":{"title":"6.1.7 登录与权限验证机制","level":"2.9.8","depth":2,"path":"md/6.md","ref":"md/6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","anchors","github","github-buttons","sharing-plus","-anchor-navigation-ex","code","search-pro","-lunr","-search","-tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"是xt写的，","modify_label":"上次修改：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/xtzero"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true},"github-buttons":{},"sharing":{"douban":true,"facebook":false,"google":false,"pocket":false,"qq":true,"qzone":true,"twitter":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"xt","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"论文","language":"zh-hans","gitbook":"3.2.3","description":"一个论文"},"file":{"path":"md/6.2.md","mtime":"2019-05-25T04:31:35.495Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T10:42:47.156Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

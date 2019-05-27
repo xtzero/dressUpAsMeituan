@@ -1,0 +1,1560 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.4 后台管理端前端页面与逻辑 · 论文</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xt">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.4.html" />
+    
+    
+    <link rel="prev" href="6.3.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    请读我
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="0.0.html">
+            
+                <a href="0.0.html">
+            
+                    
+                    标题和封皮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="0.1.html">
+            
+                <a href="0.1.html">
+            
+                    
+                    摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="README.md">
+            
+                <span>
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    第1章 需求分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.1 用户需求分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.2 需求列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    第2章 开发技术及开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.1 技术架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.2 app端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.3 管理端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.4 后端技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.5 数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.6 域名与服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.7 开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    第3章 产品设计阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3.1 可行性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3.2 系统流程设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3.3 系统功能设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3.4 用户用例图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" >
+            
+                <span>
+            
+                    
+                    第4章 开发准备与开发前设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" data-path="4.1.html">
+            
+                <a href="4.1.html">
+            
+                    
+                    4.1 搭建服务器环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" data-path="4.2.html">
+            
+                <a href="4.2.html">
+            
+                    
+                    4.2 部署框架代码到服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="4.3.html">
+            
+                <a href="4.3.html">
+            
+                    
+                    4.3 设置域名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    第5章 数据库设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5.1 概念结构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5.2 逻辑结构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.3" >
+            
+                <span>
+            
+                    
+                    5.3 数据库的物理实现
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    第6章 编码开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.9.1" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1 后端架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.2" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.1 框架结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.3" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.2 程序入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.4" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.3 数据库类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.5" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.4 参数验证方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.5 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.7" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.6 函数库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.8" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6.1.7 登录与权限验证机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2 后端接口开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.10.1" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.1 登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.2 店铺 - 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.3" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.3 店铺 - 查看店铺详情与物品列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.4" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.4 订单 - 创建订单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.5" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.5 订单 - 查看订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.6" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.5 用户 - 查看基本信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.7" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.6 用户 - 修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.8" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.7 用户 - 查看全部收货地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.9" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.8 用户 - 管理收货地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.10" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.9 后台 - 创建店铺
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.11" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.10 后台 - 修改店铺信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.12" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.11 后台 - 添加物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.13" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.12 后台 - 删除物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.14" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.13 后台 - 查看订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.15" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.14 后台 - 查看所有用户列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10.16" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2.15 后台 - 修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3 app端前端页面与逻辑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.11.1" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.1 登录与登录凭证保存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.2" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.2 标题和导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.3 用户首页和订单列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.4" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.4 店铺列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.5" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.5 店铺详情和物品列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.6" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.6 创建订单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.7" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.7 用户信息修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.8" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.8 订单详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.9" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3.9 收货地址选择和管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.12" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4 后台管理端前端页面与逻辑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.12.1" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.1 登录机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.12.2" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.2 导航和路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.12.3" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.3 订单管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.12.4" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.4 店铺管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.12.5" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.5 物品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.12.6" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4.6 用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    第7章 软件测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.13.1" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.1 功能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.2" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.2 可用性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.3" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7.3 测试结果分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="n1.html">
+            
+                <a href="n1.html">
+            
+                    
+                    结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="n2.html">
+            
+                <a href="n2.html">
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="n3.html">
+            
+                <a href="n3.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.4 后台管理端前端页面与逻辑</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="64-&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7AEF;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x4E0E;&#x903B;&#x8F91;"><a name="64-&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7AEF;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x4E0E;&#x903B;&#x8F91;" class="plugin-anchor" href="#64-&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7AEF;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x4E0E;&#x903B;&#x8F91;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4 &#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7AEF;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x4E0E;&#x903B;&#x8F91;</h2>
+<p>&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7AEF;&#x548C;App&#x7AEF;&#x4F7F;&#x7528;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x524D;&#x7AEF;&#x67B6;&#x6784;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x73B0;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x90FD;&#x5927;&#x540C;&#x5C0F;&#x5F02;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x5957;&#x6280;&#x672F;&#x67B6;&#x6784;&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x90E8;&#x5206;&#x7684;&#x9700;&#x6C42;&#x3002;</p>
+<p>&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7AEF;&#x4F7F;&#x7528;vue-cli&#x5DE5;&#x5177;&#x5F00;&#x53D1;&#xFF0C;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5B8C;&#x5168;&#x7EC4;&#x4EF6;&#x5316;&#x3002;&#x4F7F;&#x7528;vue-cli + webpack + bable&#x6253;&#x5305;&#x751F;&#x6210;&#x53D1;&#x5E03;&#x7248;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x517C;&#x5BB9;&#x5168;&#x5E73;&#x53F0;&#x3002;</p>
+<h3 id="641-&#x767B;&#x5F55;&#x673A;&#x5236;"><a name="641-&#x767B;&#x5F55;&#x673A;&#x5236;" class="plugin-anchor" href="#641-&#x767B;&#x5F55;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.1 &#x767B;&#x5F55;&#x673A;&#x5236;</h3>
+<p>&#x548C;App&#x7AEF;&#x76F8;&#x4F3C;&#xFF0C;&#x901A;&#x8FC7;&#x767B;&#x5F55;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#x4E5F;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x5230;&#x672C;&#x5730;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x4E0B;&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;5+&#x73AF;&#x5883;&#x4E2D;&#x7684;<code>plus.storage</code>&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>localStorage</code>&#x6765;&#x4FDD;&#x5B58;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x3002;&#x5728;&#x767B;&#x5F55;&#x9875;&#x9762;&#x7684;&#x903B;&#x8F91;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;</p>
+<pre><code class="lang-vue">this.$ajax(&apos;account&apos;, {
+    method: &apos;login&apos;,
+    usr: this.username,
+    pwd: this.password
+}, function(res){
+    console.log(res);
+    if (res.code == 0) {
+        for(var i in res.data){
+            localStorage.setItem(i, res.data[i]);
+        }
+
+        window.location.hash = &apos;/&apos;;
+    } else {
+        alert(res.msg);
+    }
+});
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5C06;&#x767B;&#x5F55;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x51ED;&#x8BC1;&#x5B58;&#x5165;&#x4E86;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x3002;</p>
+<h3 id="642-&#x5BFC;&#x822A;&#x548C;&#x8DEF;&#x7531;"><a name="642-&#x5BFC;&#x822A;&#x548C;&#x8DEF;&#x7531;" class="plugin-anchor" href="#642-&#x5BFC;&#x822A;&#x548C;&#x8DEF;&#x7531;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.2 &#x5BFC;&#x822A;&#x548C;&#x8DEF;&#x7531;</h3>
+<p>&#x6846;&#x67B6;&#x81EA;&#x5E26;&#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x5F53;&#x524D;&#x9879;&#x76EE;&#x7684;&#x5168;&#x90E8;&#x9700;&#x6C42;&#xFF0C;&#x5728;<code>/_nav.js</code>&#x4E2D;&#x5BFC;&#x822A;&#x662F;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x7684;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  items: [
+    {
+      name: <span class="hljs-string">&apos;&#x9996;&#x9875;&apos;</span>,
+      url: <span class="hljs-string">&apos;/home&apos;</span>,
+      icon: <span class="hljs-string">&apos;icon-speedometer&apos;</span>,
+    },
+    {
+      name: <span class="hljs-string">&apos;&#x8BA2;&#x5355;&#x7BA1;&#x7406;&apos;</span>,
+      url: <span class="hljs-string">&apos;/order&apos;</span>,
+      icon: <span class="hljs-string">&apos;icon-speedometer&apos;</span>,
+    },
+    {
+      name: <span class="hljs-string">&apos;&#x5E97;&#x94FA;&#x7BA1;&#x7406;&apos;</span>,
+      url: <span class="hljs-string">&apos;/shop&apos;</span>,
+      icon: <span class="hljs-string">&apos;icon-speedometer&apos;</span>,
+    },
+    {
+      name: <span class="hljs-string">&apos;&#x7269;&#x54C1;&#x7BA1;&#x7406;&apos;</span>,
+      url: <span class="hljs-string">&apos;/goods&apos;</span>,
+      icon: <span class="hljs-string">&apos;icon-speedometer&apos;</span>,
+    },
+    {
+      name: <span class="hljs-string">&apos;&#x7528;&#x6237;&#x7BA1;&#x7406;&apos;</span>,
+      url: <span class="hljs-string">&apos;/user&apos;</span>,
+      icon: <span class="hljs-string">&apos;icon-speedometer&apos;</span>,
+    },
+  ]
+}
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x89C4;&#x5B9A;&#x597D;&#x4E86;&#x5BFC;&#x822A;&#xFF0C;&#x5728;&#x9875;&#x9762;&#x4E0A;&#x4F1A;&#x663E;&#x793A;&#x4E3A;</p>
+<p><img src="../img/bs1.png" alt=""></p>
+<p>&#x70B9;&#x51FB;&#x6BCF;&#x4E2A;&#x5BFC;&#x822A;&#xFF0C;&#x9875;&#x9762;&#x4F1A;&#x8DF3;&#x8F6C;&#x5230;url&#x89C4;&#x5B9A;&#x7684;&#x8DEF;&#x7531;&#x4E0A;&#x3002;&#x5728;vue&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x8DEF;&#x7531;&#x4E0D;&#x662F;&#x666E;&#x901A;&#x7684;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528;&#x4E86;url&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x529F;&#x80FD;&#x3002;&#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x9996;&#x9875;&#x5BF9;&#x5E94;&#x7684;url&#x662F;</p>
+<pre><code>http://host/#/home
+</code></pre><p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;&#x5728;url&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x4EE5;<code>#</code>&#x5206;&#x5272;&#xFF0C;<code>#</code>&#x540E;&#x8FB9;&#x662F;&#x951A;&#x70B9;&#x503C;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x4E0E;a&#x6807;&#x7B7E;&#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x7528;&#x4E8E;&#x8DF3;&#x8F6C;&#x5230;&#x9875;&#x9762;&#x7684;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x3002;vue&#x5C06;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x5C01;&#x88C5;&#x6210;&#x4E86;&#x8DEF;&#x7531;&#xFF0C;&#x4F7F;&#x7528;&#x8DF3;&#x8F6C;&#x5230;&#x67D0;&#x4E2A;&#x951A;&#x70B9;&#x7684;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x3002;&#x8DEF;&#x7531;&#x7684;&#x5177;&#x4F53;&#x539F;&#x7406;&#x4E0D;&#x7528;&#x6DF1;&#x7A76;&#xFF0C;&#x5B9E;&#x73B0;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x8DEF;&#x7531;&#x89C4;&#x5B9A;&#x5728;<code>/router/index.js</code>&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> Router <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue-router&apos;</span>
+
+<span class="hljs-keyword">const</span>  homepage = () =&gt; <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;@/views/a/home.vue&apos;</span>);
+<span class="hljs-keyword">const</span> order = () =&gt; <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;@/views/a/order.vue&apos;</span>);
+<span class="hljs-keyword">const</span> login = () =&gt; <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;@/views/a/Login.vue&apos;</span>);
+<span class="hljs-keyword">const</span> shop = () =&gt; <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;@/views/a/shop.vue&apos;</span>);
+<span class="hljs-keyword">const</span> goods = () =&gt; <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;@/views/a/goods.vue&apos;</span>);
+<span class="hljs-keyword">const</span> user = () =&gt; <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;@/views/a/user.vue&apos;</span>);
+Vue.use(Router)
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">new</span> Router({
+    mode: <span class="hljs-string">&apos;hash&apos;</span>, <span class="hljs-comment">// https://router.vuejs.org/api/#mode</span>
+    linkActiveClass: <span class="hljs-string">&apos;open active&apos;</span>,
+    scrollBehavior: () =&gt; ({y: <span class="hljs-number">0</span>}),
+    routes: [
+        {
+            path: <span class="hljs-string">&apos;/&apos;</span>,
+            redirect: <span class="hljs-string">&apos;/home&apos;</span>,
+            name: <span class="hljs-string">&apos;&apos;</span>,
+            component: DefaultContainer,
+            children: [
+                {
+                    path: <span class="hljs-string">&apos;home&apos;</span>,
+                    name: <span class="hljs-string">&apos;&#x9996;&#x9875;&apos;</span>,
+                    component: homepage
+                },
+                {
+                    path: <span class="hljs-string">&apos;shop&apos;</span>,
+                    name: <span class="hljs-string">&apos;&#x5E97;&#x94FA;&#x7BA1;&#x7406;&apos;</span>,
+                    component: shop,
+                },
+                {
+                    path: <span class="hljs-string">&apos;order&apos;</span>,
+                    name: <span class="hljs-string">&apos;&#x8BA2;&#x5355;&#x7BA1;&#x7406;&apos;</span>,
+                    component: order
+                },
+                {
+                    path: <span class="hljs-string">&apos;goods&apos;</span>,
+                    name: <span class="hljs-string">&apos;&#x7269;&#x54C1;&#x7BA1;&#x7406;&apos;</span>,
+                    component: goods
+                },
+                {
+                    path: <span class="hljs-string">&apos;user&apos;</span>,
+                    name: <span class="hljs-string">&apos;&#x7528;&#x6237;&#x7BA1;&#x7406;&apos;</span>,
+                    component: user
+                }
+            ]
+        },
+        {
+            path: <span class="hljs-string">&apos;/login&apos;</span>,
+            name: <span class="hljs-string">&apos;&apos;</span>,
+            component: login,
+
+        }
+    ]
+})
+</code></pre>
+<p>&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#x89C4;&#x5B9A;&#x597D;&#x4E86;&#x8DEF;&#x7531;&#x529F;&#x80FD;&#xFF0C;&#x5728;&#x6846;&#x67B6;&#x79CD;&#x8FD8;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8DEF;&#x7531;&#x7684;<code>name</code>&#x5B57;&#x6BB5;&#x503C;&#x6765;&#x751F;&#x6210;&#x9762;&#x5305;&#x5C51;&#x3002;&#x4F8B;&#x5982;</p>
+<p><img src="../img/bs2.png" alt=""></p>
+<blockquote>
+<p>&#x4E0A;&#x56FE;&#x4E2D;&#x9876;&#x90E8;&#x7684;&#x201C;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x201D;&#x5C31;&#x662F;&#x9762;&#x5305;&#x5C51;&#xFF0C;&#x5F53;&#x4EA7;&#x751F;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#x65F6;&#xFF0C;&#x9762;&#x5305;&#x5C51;&#x8FD8;&#x6709;&#x8DF3;&#x8F6C;&#x529F;&#x80FD;&#x3002;</p>
+</blockquote>
+<p>&#x53EA;&#x6709;&#x5728;&#x8DEF;&#x7531;&#x4E2D;&#x89C4;&#x5B9A;&#x597D;&#x7684;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#xFF0C;&#x70B9;&#x51FB;&#x5BFC;&#x822A;&#x65F6;&#x624D;&#x4F1A;&#x52A0;&#x8F7D;&#x5BF9;&#x5E94;&#x7684;vue&#x6A21;&#x677F;&#x3002;</p>
+<h3 id="643-&#x8BA2;&#x5355;&#x7BA1;&#x7406;"><a name="643-&#x8BA2;&#x5355;&#x7BA1;&#x7406;" class="plugin-anchor" href="#643-&#x8BA2;&#x5355;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.3 &#x8BA2;&#x5355;&#x7BA1;&#x7406;</h3>
+<p>&#x8BA2;&#x5355;&#x7BA1;&#x7406;&#x4F7F;&#x7528;&#x8868;&#x683C;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF0C;vue&#x6A21;&#x677F;&#x662F;</p>
+<pre><code class="lang-vue">&lt;template&gt;
+    &lt;div class=&quot;animated fadeIn&quot;&gt;
+        &lt;b-row&gt;
+            &lt;b-col&gt;
+                &lt;table border=&quot;0&quot; class=&quot;cTable&quot;&gt;
+                    &lt;tr class=&quot;table-line1&quot;&gt;
+                        &lt;th&gt;&#x8BA2;&#x5355;id&lt;/th&gt;
+                        &lt;th&gt;&#x7269;&#x54C1;&lt;/th&gt;
+                        &lt;th&gt;&#x8BA2;&#x9910;&#x4EBA;&lt;/th&gt;
+                        &lt;th&gt;&#x4EF7;&#x683C;&lt;/th&gt;
+                        &lt;th&gt;&#x7535;&#x8BDD;&lt;/th&gt;
+                        &lt;th&gt;&#x5730;&#x5740;&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr v-for=&quot;(v,k) in list&quot;&gt;
+                        &lt;td&gt;v.id&lt;/td&gt;
+                        &lt;td&gt; &#x7B49;&lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;del&gt;&lt;/del&gt; / &lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/b-col&gt;
+        &lt;/b-row&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x9875;&#x9762;&#x4F1A;&#x52A0;&#x8F7D;&#x8BA2;&#x5355;&#x5217;&#x8868;&#xFF0C;&#x8F7D;&#x5165;&#x8BA2;&#x5355;&#x5217;&#x8868;&#x7684;&#x63A5;&#x53E3;&#x8BBF;&#x95EE;&#x903B;&#x8F91;&#x662F;</p>
+<pre><code class="lang-javascript">listShop() {
+    <span class="hljs-keyword">this</span>.$ajax(<span class="hljs-string">&apos;order&apos;</span>, {
+        method: <span class="hljs-string">&apos;orderList&apos;</span>,
+        token: <span class="hljs-built_in">window</span>.localStorage.getItem(<span class="hljs-string">&apos;token&apos;</span>)
+    }, (res) =&gt; {
+        <span class="hljs-built_in">console</span>.log(res);
+        <span class="hljs-keyword">if</span> (res.code == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">this</span>.list = [];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> res.data) {
+                <span class="hljs-keyword">this</span>.list.push(res.data[i]);
+            }
+        } <span class="hljs-keyword">else</span> {
+            alert(res.msg);
+        }
+    });
+}
+</code></pre>
+<p>&#x52A0;&#x8F7D;&#x597D;&#x4E86;&#x6570;&#x636E;&#x4F1A;&#x653E;&#x5728;vue&#x7684;data&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x5E76;&#x5FAA;&#x73AF;&#x6E32;&#x67D3;&#x5230;&#x9875;&#x9762;&#x4E0A;&#x3002;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x7684;&#x6548;&#x679C;&#x662F;</p>
+<p><img src="../img/bs3.png" alt=""></p>
+<h3 id="644-&#x5E97;&#x94FA;&#x7BA1;&#x7406;"><a name="644-&#x5E97;&#x94FA;&#x7BA1;&#x7406;" class="plugin-anchor" href="#644-&#x5E97;&#x94FA;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.4 &#x5E97;&#x94FA;&#x7BA1;&#x7406;</h3>
+<p>&#x8FDB;&#x5165;&#x5E97;&#x94FA;&#x7BA1;&#x7406;&#x9875;&#x9762;&#x4F1A;&#x52A0;&#x8F7D;&#x5E97;&#x94FA;&#x5217;&#x8868;</p>
+<pre><code class="lang-javascript">listShop() {
+    <span class="hljs-keyword">this</span>.$ajax(<span class="hljs-string">&apos;shop&apos;</span>, {
+        method: <span class="hljs-string">&apos;listShop&apos;</span>,
+        token: <span class="hljs-built_in">window</span>.localStorage.getItem(<span class="hljs-string">&apos;token&apos;</span>)
+    }, (res) =&gt; {
+        <span class="hljs-built_in">console</span>.log(res);
+        <span class="hljs-keyword">if</span> (res.code == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">this</span>.list = [];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> res.data) {
+                <span class="hljs-keyword">this</span>.list.push(res.data[i]);
+            }
+        } <span class="hljs-keyword">else</span> {
+            alert(res.msg);
+        }
+    });
+}
+</code></pre>
+<p>&#x52A0;&#x8F7D;&#x5E97;&#x94FA;&#x5217;&#x8868;&#x7684;&#x540C;&#x65F6;&#x4E3A;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x7ED1;&#x5B9A;&#x4FEE;&#x6539;&#x529F;&#x80FD;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x5BF9;&#x5355;&#x6761;&#x6570;&#x636E;&#x7684;&#x64CD;&#x4F5C;&#x529F;&#x80FD;&#x3002;&#x9875;&#x9762;&#x6E32;&#x67D3;&#x90E8;&#x5206;&#x7684;&#x5B9E;&#x73B0;&#x662F;</p>
+<pre><code class="lang-vue">&lt;b-row&gt;
+    &lt;b-col&gt;
+        &lt;table border=&quot;0&quot; class=&quot;cTable&quot;&gt;
+            &lt;tr class=&quot;table-line1&quot;&gt;
+                &lt;th&gt;&#x5E97;&#x94FA;id&lt;/th&gt;
+                &lt;th&gt;&#x5E97;&#x94FA;&#x540D;&#x79F0;&lt;/th&gt;
+                &lt;th&gt;&#x5E97;&#x94FA;&#x7B80;&#x4ECB;&lt;/th&gt;
+                &lt;th&gt;&#x64CD;&#x4F5C;&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr v-for=&quot;(v,k) in list&quot;&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt; &lt;i class=&quot;icon-note icons font-2xl d-block mt-4&quot; @click=&quot;editShop(v.id,&apos;name&apos;)&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+                &lt;td&gt; &lt;i class=&quot;icon-note icons font-2xl d-block mt-4&quot; @click=&quot;editShop(v.id,&apos;notice&apos;)&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;b-button class=&quot;td-btn&quot; variant=&quot;primary&quot; @click=&quot;delShop(v)&quot;&gt;&#x5220;&#x9664;&#x5E97;&#x94FA;&lt;/b-button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/b-col&gt;
+&lt;/b-row&gt;
+</code></pre>
+<p>&#x5728;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#xFF0C;&#x63D0;&#x4F9B;&#x6DFB;&#x52A0;&#x5E97;&#x94FA;&#x7684;&#x529F;&#x80FD;&#x3002;&#x6DFB;&#x52A0;&#x5E97;&#x94FA;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5F15;&#x7528;&#x4E86;&#x6846;&#x67B6;&#x7684;<code>b-form</code>&#x7EC4;&#x4EF6;&#xFF0C;&#x6765;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x4EBA;&#x6027;&#x5316;&#x7684;&#x8F93;&#x5165;&#x8868;&#x5355;&#x3002;</p>
+<p><img src="../img/bs4.png" alt=""></p>
+<p>&#x5E97;&#x94FA;&#x7BA1;&#x7406;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x7684;&#x6548;&#x679C;&#x662F;</p>
+<p><img src="../img/bs5.png" alt=""></p>
+<h3 id="645-&#x7269;&#x54C1;&#x7BA1;&#x7406;"><a name="645-&#x7269;&#x54C1;&#x7BA1;&#x7406;" class="plugin-anchor" href="#645-&#x7269;&#x54C1;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.5 &#x7269;&#x54C1;&#x7BA1;&#x7406;</h3>
+<p>&#x7269;&#x54C1;&#x7BA1;&#x7406;&#x548C;&#x5E97;&#x94FA;&#x7BA1;&#x7406;&#x7684;&#x9875;&#x9762;&#x903B;&#x8F91;&#x5927;&#x540C;&#x5C0F;&#x5F02;&#xFF0C;&#x4E5F;&#x662F;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x518D;&#x63D0;&#x4F9B;&#x4FEE;&#x6539;&#x529F;&#x80FD;&#x3002;&#x5B9E;&#x73B0;&#x6548;&#x679C;&#x662F;</p>
+<p><img src="../img/bs6.png" alt=""></p>
+<p>&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x6DFB;&#x52A0;&#x7269;&#x54C1;&#x7684;&#x529F;&#x80FD;&#x3002;&#x6DFB;&#x52A0;&#x7269;&#x54C1;&#x65F6;&#xFF0C;&#x6240;&#x5C5E;&#x5E97;&#x94FA;&#x9700;&#x8981;&#x4ECE;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5E97;&#x94FA;&#x5217;&#x8868;&#x4E2D;&#x83B7;&#x53D6;&#x3002;</p>
+<p><img src="../img/bs7.png" alt=""></p>
+<h3 id="646-&#x7528;&#x6237;&#x7BA1;&#x7406;"><a name="646-&#x7528;&#x6237;&#x7BA1;&#x7406;" class="plugin-anchor" href="#646-&#x7528;&#x6237;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4.6 &#x7528;&#x6237;&#x7BA1;&#x7406;</h3>
+<p>&#x7528;&#x6237;&#x7BA1;&#x7406;&#x9875;&#x9762;&#x4F1A;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x5B58;&#x5728;&#x7684;&#x5168;&#x90E8;&#x7528;&#x6237;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x5305;&#x62EC;&#x7528;&#x6237;&#x4F59;&#x989D;&#x7684;&#x4FEE;&#x6539;&#x6743;&#x9650;&#x3002;</p>
+<p><img src="../img/bs8.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.3.html" class="navigation navigation-prev " aria-label="Previous page: 6.3.9 收货地址选择和管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.4.html" class="navigation navigation-next " aria-label="Next page: 6.4.1 登录机制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.4 后台管理端前端页面与逻辑","level":"2.12","depth":1,"next":{"title":"6.4.1 登录机制","level":"2.12.1","depth":2,"path":"md/6.4.md","ref":"md/6.4.md","articles":[]},"previous":{"title":"6.3.9 收货地址选择和管理","level":"2.11.9","depth":2,"path":"md/6.3.md","ref":"md/6.3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","anchors","github","github-buttons","sharing-plus","-anchor-navigation-ex","code","search-pro","-lunr","-search","-tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"是xt写的，","modify_label":"上次修改：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/xtzero"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true},"github-buttons":{},"sharing":{"douban":true,"facebook":false,"google":false,"pocket":false,"qq":true,"qzone":true,"twitter":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"xt","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"论文","language":"zh-hans","gitbook":"3.2.3","description":"一个论文"},"file":{"path":"md/6.4.md","mtime":"2019-05-26T10:34:10.910Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T10:42:47.156Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
